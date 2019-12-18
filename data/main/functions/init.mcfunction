@@ -7,7 +7,6 @@ data modify entity 0-0-1-0-1 {} merge from storage template:item Base
 
 function dice:init
 function random:score/init
-
-
+function turn:init
 
 say ロードしました。
