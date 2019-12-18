@@ -14,4 +14,4 @@ execute at 0-0-1-0-1 run summon minecraft:item ~ ~2 ~ {Item:{id:"minecraft:diamo
 execute at 0-0-1-0-1 run summon minecraft:item ~ ~3 ~ {Item:{id:"minecraft:diamond_sword",Count:1b,tag:{}},Tags:[Dice,Dice3]}
 execute at 0-0-1-0-1 run summon minecraft:item ~ ~4 ~ {Item:{id:"minecraft:diamond_sword",Count:1b,tag:{}},Tags:[Dice,Dice4]}
 
-
+execute as @e[tag=Dice] run data modify entity @s {} merge from storage template:item Base
