@@ -1,3 +1,4 @@
 ### 初期化が必要かどうか
 
-execute unless entity @e[tag=FALSE] run function main:pre_init
+# TODO : 条件
+function main:pre_init

@@ -1,4 +1,4 @@
-
+### ゲーム座標を取得
 
 execute store result score $X Coord run data get entity @s Pos[0] 100
 execute store result score $Z Coord run data get entity @s Pos[2] 100

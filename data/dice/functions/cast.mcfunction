@@ -6,4 +6,4 @@ function dice:title
 
 scoreboard players set $Sum Dice 0
 execute unless entity @e[tag=Dice,tag=Active,tag=Undeterminated,limit=1] run scoreboard players operation $Sum Dice += @e[tag=Dice,tag=Active] Dice
-execute if entity @e[tag=Dice,tag=Active,tag=Undeterminated,limit=1] run schedule function dice:cast 1t
+execute if entity @e[tag=Dice,tag=Active,tag=Undeterminated,limit=1] run schedule function dice:cast 1t replace

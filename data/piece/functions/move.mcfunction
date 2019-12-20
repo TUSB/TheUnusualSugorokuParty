@@ -8,5 +8,5 @@ execute as @e[tag=Piece,tag=Active,limit=1] run function piece:set_position
 function dice:reduce_one
 function dice:subtitle
 
-execute if score $Sum Dice matches 1.. run schedule function piece:move 15t
-execute unless score $Sum Dice matches 1.. run schedule function turn:end 15t
+execute if score $Sum Dice matches 1.. run schedule function piece:move 15t replace
+execute unless score $Sum Dice matches 1.. run schedule function turn:after_move 15t replace
