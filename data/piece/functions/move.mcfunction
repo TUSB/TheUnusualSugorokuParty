@@ -9,4 +9,4 @@ function dice:reduce_one
 function dice:subtitle
 
 execute if score $Sum Dice matches 1.. run schedule function piece:move 15t replace
-execute unless score $Sum Dice matches 1.. run schedule function turn:after_move 15t replace
+execute unless score $Sum Dice matches 1.. run schedule function turn:handle_event 15t replace

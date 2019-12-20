@@ -1,5 +1,4 @@
 ### ダイス確定後行動
 
-# このファンクション要らないかも
-
-schedule function turn:start_next 3s replace
+execute if entity @e[tag=EventEntity,limit=1] run schedule function turn:after_move 1t replace
+execute unless entity @e[tag=EventEntity,limit=1] run schedule function turn:start_next 1t replace

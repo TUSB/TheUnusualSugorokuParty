@@ -9,3 +9,6 @@ schedule clear turn:after_move
 
 # タイトルを消す
 title @a times 0 0 0
+
+# デバッグ用
+gamemode creative @a[tag=Debugger]
