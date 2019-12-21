@@ -33,4 +33,4 @@ execute as @e[tag=Cloudia] run data modify entity @s Item.tag merge from storage
 execute as @e[tag=Island] run data modify entity @s {} merge from storage template:item Base
 execute as @e[tag=Island] store result entity @s Pos[0] double 1 run data get entity @s Item.tag.Center[0] 1
 execute as @e[tag=Island] store result entity @s Pos[2] double 1 run data get entity @s Item.tag.Center[1] 1
-execute as @e[tag=Island] at @s align xyz run tp @s ~0.5 ~ ~0.5 ~ ~
+execute as @e[tag=Central] at @s align xyz run tp @s ~0.5 ~ ~0.5 ~ ~
