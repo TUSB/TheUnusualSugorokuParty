@@ -17,8 +17,7 @@ execute as @e[tag=Piece] if score @s Turn = $Piece Turn run tag @s add Active
 
 # 行動プレイヤーの設定
 gamemode spectator @a[tag=!Active]
-gamemode adventure @a[tag=Active]
-execute as @e[tag=Piece,tag=Active,limit=1] at @s positioned ^-1 ^1 ^-2 run tp @a[tag=Active] ~ ~ ~ ~ ~
+function piece:call_player
 
 tag @e[tag=Dice] remove Active
 tag @e[tag=Dice] add Undeterminated
