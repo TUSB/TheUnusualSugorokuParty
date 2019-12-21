@@ -8,8 +8,8 @@ scoreboard players operation @a[team=Green] Turn = @e[tag=Piece,team=Green,limit
 scoreboard players operation @a[team=Blue] Turn = @e[tag=Piece,team=Blue,limit=1] Turn
 scoreboard players operation @a[team=Yellow] Turn = @e[tag=Piece,team=Yellow,limit=1] Turn
 
-scoreboard players operation @e[tag=Piece] Coord = $Start Coord
-execute as @e[tag=Piece] run function piece:set_position
+execute as @e[tag=Island,tag=Central,limit=1] run function island:set_start
+execute as @e[tag=Piece] run function piece:set_location
 
 scoreboard players set $Current Turn -1
 function turn:start_next

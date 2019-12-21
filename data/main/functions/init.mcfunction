@@ -6,13 +6,14 @@ data modify storage template:armor_stand Base set value {Invisible:true,Invulner
 summon minecraft:item 0 0 0 {Item:{id:"minecraft:diamond_sword",Count:1b,tag:{}},Tags:[Origin],UUIDMost:1L,UUIDLeast:1L}
 data modify entity 0-0-1-0-1 {} merge from storage template:item Base
 
-summon minecraft:armor_stand 0 0 0 {Tags:[Pointer],UUIDMost:2L,UUIDLeast:2L}
-data modify entity 0-0-2-0-2 {} merge from storage template:armor_stand Base
+summon minecraft:item 0 0 0 {Item:{id:"minecraft:diamond_sword",Count:1b,tag:{}},Tags:[Pointer],UUIDMost:2L,UUIDLeast:2L}
+data modify entity 0-0-2-0-2 {} merge from storage template:item Base
 
-function random:score/init
 function dice:init
-function turn:init
-function piece:init
 function event:init
+function island:init
+function random:init
+function piece:init
+function turn:init
 
 say ロードしました。

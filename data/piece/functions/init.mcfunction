@@ -9,13 +9,10 @@ team modify Green color green
 team modify Blue color blue
 team modify Yellow color yellow
 
-# scoreboard objectives add Piece dummy {"text":"駒"}
-scoreboard objectives add Coord dummy {"text":"座標 1000X + Z"}
-scoreboard players set $Start Coord 9009
-scoreboard players set $OriginX Coord -2050
-scoreboard players set $OriginZ Coord -2050
-scoreboard players set #400 Coord 400
-scoreboard players set #1000 Coord 1000
+scoreboard objectives add X dummy {"text":"X(cm)"}
+scoreboard objectives add Z dummy {"text":"Z(cm)"}
+scoreboard players set #Origin X -2050
+scoreboard players set #Origin Z -2050
 
 scoreboard objectives add Turn dummy
 # 仮で定義
@@ -27,3 +24,4 @@ summon minecraft:armor_stand 0 0 0 {Tags:[Piece],ArmorItems:[{},{},{},{id:"minec
 summon minecraft:armor_stand 0 0 0 {Tags:[Piece],ArmorItems:[{},{},{},{id:"minecraft:yellow_banner",Count:1b}],Team:Yellow}
 
 execute as @e[tag=Piece] run data modify entity @s {} merge from storage template:armor_stand Base
+execute as @e[tag=Piece] run data modify entity @s CustomName set value "{\"text\":\"駒\"}"
