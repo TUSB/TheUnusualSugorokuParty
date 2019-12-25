@@ -11,8 +11,10 @@ team modify Yellow color yellow
 
 scoreboard objectives add X dummy {"text":"X(cm)"}
 scoreboard objectives add Z dummy {"text":"Z(cm)"}
-scoreboard players set #Origin X -2050
-scoreboard players set #Origin Z -2050
+# scoreboard players set #Origin X -2050
+# scoreboard players set #Origin Z -2050
+scoreboard players set #Origin X -6150
+scoreboard players set #Origin Z -108650
 
 scoreboard objectives add Turn dummy
 # 仮で定義
