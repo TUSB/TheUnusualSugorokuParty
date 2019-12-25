@@ -10,7 +10,7 @@ execute store result score Top Count store result score Center Count store resul
 function event:treasure/count_up
 
 # 抽選候補のランクを取得
-execute store result score Random Count run function random:uuid/get
+execute store result score Random Count run function random:score/next
 scoreboard players set #6 Count 6
 scoreboard players operation Random Count %= #6 Count
 function event:treasure/get_rank
@@ -26,7 +26,7 @@ execute if score Rank Count matches 1.. run scoreboard players operation Offset 
 execute if score Rank Count matches 2.. run scoreboard players operation Offset Count += Center Count
 
 # 決まった段の中から何番目かを決める
-execute store result score Random count run function random:uuid/get
+execute store result score Random Count run function random:score/next
 scoreboard players operation Random Count %= Range Count
 execute store result score Index Count run scoreboard players operation Random Count += Offset Count
 
