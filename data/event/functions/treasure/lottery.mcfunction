@@ -32,4 +32,3 @@ execute store result score Index Count run scoreboard players operation Random C
 
 # 当たりをストレージに入れる
 function event:treasure/get_item
-
