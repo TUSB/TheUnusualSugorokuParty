@@ -14,4 +14,4 @@ execute unless entity @a[tag=Active,tag=!Leader] run title @a subtitle [{"select
 execute if entity @a[tag=Active,tag=!Leader] run title @a subtitle [{"selector":"@a[tag=Active,tag=Leader,limit=1]"},"たちは宝箱を発見した！！"]
 title @a title [{"selector":"@e[tag=Treasure]"}]
 
-schedule function event:chest/poll_pickup 2t replace
+schedule function event:treasure/poll_pickup 2t replace
