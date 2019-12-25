@@ -11,8 +11,8 @@ function event:treasure/count_up
 
 # 抽選候補のランクを取得
 execute store result score Random Count run function random:score/next
-scoreboard players set #6 Count 6
-scoreboard players operation Random Count %= #6 Count
+scoreboard players set #7 Count 7
+scoreboard players operation Random Count %= #7 Count
 function event:treasure/get_rank
 
 # その段のアイテム数
