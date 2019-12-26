@@ -1,5 +1,7 @@
 ### エンカウント処理
 
+title @a times 0 0 20
+
 # SpawnData編集
 data modify entity 0-0-3-0-3 SpawnData set from storage battle:pool Item.tag.EntityTag.SpawnData
 # SpawnCount編集
