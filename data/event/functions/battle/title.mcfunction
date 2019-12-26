@@ -1,6 +1,6 @@
 ### 敵出現タイトル表示
 
-title @s times 6 10 6
+title @a times 6 10 6
 execute as @a at @s run function sounds:battle_outbreak
 execute unless entity @a[tag=Active,tag=!Leader] run title @a subtitle [{"selector":"@a[tag=Active,tag=Leader,limit=1]"},"は敵に見つかった！！"]
 execute if entity @a[tag=Active,tag=!Leader] run title @a subtitle [{"selector":"@a[tag=Active,tag=Leader,limit=1]"},"たちは敵に見つかった！！"]

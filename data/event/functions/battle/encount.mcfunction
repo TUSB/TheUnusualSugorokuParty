@@ -3,7 +3,7 @@
 # SpawnData編集
 data modify entity 0-0-3-0-3 SpawnData set from storage battle:pool Item.tag.EntityTag.SpawnData
 # SpawnCount編集
-execute store result entity 0-0-3-0-3 SpawnCount run scoreboard players get $Sum Dice
+execute store result entity 0-0-3-0-3 SpawnCount short 1 run scoreboard players get $Sum Dice
 # Pos編集
 execute at 0-0-2-0-2 as @e[tag=Island,tag=!Central,sort=nearest,limit=1] store result score _ X run data get entity @s Pos[0] 400
 execute at 0-0-2-0-2 as @e[tag=Island,tag=!Central,sort=nearest,limit=1] store result score _ Z run data get entity @s Pos[2] 400
