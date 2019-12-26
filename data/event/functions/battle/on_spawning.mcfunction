@@ -1,8 +1,8 @@
 ### 敵が湧いた時
 
 # 敵にEntityタグ付ける
-execute at 0-0-3-0-3 run tag @e[distance=..30,team=!Dummy,type=!minecraft:player,type=!minecraft:armor_stand] add Enemy
-execute at 0-0-3-0-3 run tag @e[distance=..30,team=!Dummy,type=!minecraft:player,type=!minecraft:armor_stand] add EventEntity
+# ずぼら処理
+execute at 0-0-3-0-3 as @e[distance=..30,team=!Dummy,type=!minecraft:player,type=!minecraft:armor_stand] run data merge entity @s {Tags:[Enemy,EventEntity],Invulnerable:false}
 
 # スポナーを戻す
 tp 0-0-3-0-3 0 0 0
