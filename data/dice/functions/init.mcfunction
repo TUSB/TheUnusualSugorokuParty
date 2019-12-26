@@ -6,7 +6,7 @@ scoreboard objectives add DiceMax dummy
 
 scoreboard players set #6 Dice 6
 
-data merge storage dice:names {empty:"{\"text\":\"\"}",dice1:"{\"text\":\" ⚀\"}",dice2:"{\"text\":\" ⚁\"}",dice3:"{\"text\":\" ⚂\"}",dice4:"{\"text\":\" ⚃\"}",dice5:"{\"text\":\" ⚄\"}",dice6:"{\"text\":\"⚅\"}"}
+data merge storage dice:names {empty:"{\"text\":\"\"}",dice1:"{\"text\":\" ⚀\"}",dice2:"{\"text\":\" ⚁\"}",dice3:"{\"text\":\" ⚂\"}",dice4:"{\"text\":\" ⚃\"}",dice5:"{\"text\":\" ⚄\"}",dice6:"{\"text\":\" ⚅\"}"}
 data merge storage dice:types {normal:{Dices:[1,2,3,4,5,6]}}
 
 kill @e[tag=Dice]
