@@ -21,4 +21,4 @@ execute unless score _ Choice = _ Choice run function event:select/neutral
 execute if score _ Choice = _ Choice if entity @a[tag=Active,tag=Leader,scores={Jump=1..}] run scoreboard players operation $Selected Choice = _ Choice
 scoreboard players reset @a Jump
 
-execute unless score $Selected Choice = $Selected Choice run schedule function event:select/poll 1t replace
+execute unless score $Selected Choice = $Selected Choice run schedule function event:select/await 1t replace
