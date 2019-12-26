@@ -10,5 +10,6 @@ execute if score Timer Count matches 30.. run bossbar set event:timer color whit
 execute if score Timer Count matches 10..29 run bossbar set event:timer color yellow
 execute if score Timer Count matches ..9 run bossbar set event:timer color red
 
-execute if score Timer Count matches 1.. if entity @e[tag=EventEntity,limit=1] run schedule function event:timer/clock 1s replace
-execute if score Timer Count matches ..0 run schedule function event:timer/finish 1s replace
+execute unless entity @e[tag=EventEntity,limit=1] run scoreboard players set Timer Count -1
+execute if score Timer Count matches 0.. run schedule function event:timer/clock 1s replace
+execute unless score Timer Count matches 0.. run function event:timer/finish
