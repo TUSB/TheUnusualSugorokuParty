@@ -9,5 +9,8 @@ schedule clear turn:before_move
 # タイトルを消す
 title @a times 0 0 0
 
+# タイマーを消す
+function event:timer/finish
+
 # デバッグ用
 gamemode creative @a[tag=Debugger]
