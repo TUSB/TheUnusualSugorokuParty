@@ -13,3 +13,5 @@ bossbar set event:timer max 60
 bossbar set event:timer value 0
 bossbar set event:timer style notched_6
 bossbar set event:timer color white
+
+scoreboard players set #2 Count 2
