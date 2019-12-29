@@ -37,4 +37,4 @@ loot replace entity @s hotbar.0 9 mine 2 0 2 minecraft:debug_stick
 
 # インベントリ
 data modify block 2 0 2 Items set from storage inventory:data Class.Inventory
-loot replace entity @s inventory.9 27 mine 2 0 2 minecraft:debug_stick
+loot replace entity @s inventory.0 27 mine 2 0 2 minecraft:debug_stick
