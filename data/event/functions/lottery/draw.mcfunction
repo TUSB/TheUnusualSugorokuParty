@@ -22,10 +22,10 @@ scoreboard players operation $WeightSum Count += $Legends Count
 execute store result score $Index Count run function random:score/next
 scoreboard players operation $Index Count %= $WeightSum Count
 
-execute if score $Index Count < Legends Count run function event:lottery/take/legend
+execute if score $Index Count < $Legends Count run function event:lottery/take/legend
 scoreboard players operation $Index Count -= $Legends Count
 scoreboard players operation $Index Count /= #2 Count
-execute if score $Index Count < Rares Count if score $Index Count matches 0.. run function event:lottery/take/rare
+execute if score $Index Count < $Rares Count if score $Index Count matches 0.. run function event:lottery/take/rare
 scoreboard players operation $Index Count -= $Rares Count
 scoreboard players operation $Index Count /= #2 Count
-execute if score $Index Count < Normals Count if score $Index Count matches 0.. run function event:lottery/take/normal
+execute if score $Index Count < $Normals Count if score $Index Count matches 0.. run function event:lottery/take/normal
