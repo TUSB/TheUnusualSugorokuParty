@@ -8,10 +8,10 @@ team modify Red color red
 team modify Green color green
 team modify Blue color blue
 team modify Yellow color yellow
-team modify Red collisionRule pushOtherTeams
-team modify Green collisionRule pushOtherTeams
-team modify Blue collisionRule pushOtherTeams
-team modify Yellow collisionRule pushOtherTeams
+team modify Red collisionRule never
+team modify Green collisionRule never
+team modify Blue collisionRule never
+team modify Yellow collisionRule never
 
 scoreboard objectives add X dummy {"text":"X(cm)"}
 scoreboard objectives add Z dummy {"text":"Z(cm)"}
