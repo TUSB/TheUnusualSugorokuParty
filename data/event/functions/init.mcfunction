@@ -15,3 +15,4 @@ bossbar set event:timer style notched_6
 bossbar set event:timer color white
 
 scoreboard players set #2 Count 2
+scoreboard players set #9 Count 9
