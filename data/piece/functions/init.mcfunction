@@ -16,6 +16,7 @@ scoreboard objectives add Z dummy {"text":"Z(cm)"}
 scoreboard players set #Origin X -6150
 scoreboard players set #Origin Z -108650
 
+scoreboard objectives remove Turn
 scoreboard objectives add Turn dummy
 # 仮で定義
 scoreboard players set $PieceCount Turn 4
