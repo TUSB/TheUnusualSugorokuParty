@@ -17,6 +17,7 @@ execute as @e[tag=Piece] if score @s Turn = $Piece Turn run tag @s add Active
 
 # エフェクトリセット
 effect clear @a
+effect give @a minecraft:saturation 1 20
 
 # 行動プレイヤーの設定
 gamemode spectator @a[tag=!Active]

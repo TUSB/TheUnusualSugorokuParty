@@ -3,7 +3,7 @@
 title @a times 0 0 20
 
 # SpawnCount編集
-execute store result entity 0-0-3-0-3 SpawnCount short 1 run scoreboard players set #1 Count 1
+execute store result entity 0-0-3-0-3 SpawnCount short 1 if entity @a[tag=Active]
 # Pos編集
 execute at 0-0-2-0-2 as @e[tag=Island,tag=!Central,sort=nearest,limit=1] store result score _ X run data get entity @s Pos[0] 400
 execute at 0-0-2-0-2 as @e[tag=Island,tag=!Central,sort=nearest,limit=1] store result score _ Z run data get entity @s Pos[2] 400
@@ -17,6 +17,7 @@ execute store result entity 0-0-3-0-3 Pos[2] double 0.01 run scoreboard players 
 data modify entity 0-0-3-0-3 Delay set value 0s
 
 # プレイヤー呼ぶ
+effect give @a[tag=Active] minecraft:strength 60 10 false
 execute at 0-0-3-0-3 run spreadplayers ~ ~ 0 1 false @a[tag=Active]
 
 # スポーン待ちに入る
