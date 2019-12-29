@@ -2,7 +2,7 @@
 
 # 敵にEntityタグ付ける
 # ずぼら処理
-execute at 0-0-3-0-3 as @e[distance=..30,team=!Dummy,type=!minecraft:player,type=!minecraft:armor_stand] run data merge entity @s {Tags:[Enemy,EventEntity],Invulnerable:false}
+execute at 0-0-3-0-3 as @e[distance=..30,team=!Dummy,type=!minecraft:player,type=!minecraft:armor_stand] run data merge entity @s {Tags:[Enemy,EventEntity],Invulnerable:false,CustomNameVisible:true}
 
 # 敵を散開
 execute at 0-0-3-0-3 run spreadplayers ~ ~ 0 8 false @e[tag=Enemy]

@@ -31,6 +31,7 @@ summon minecraft:item 0 0 0 {Item:{id:"minecraft:iron_sword",Count:1b,tag:{}},Ta
 execute as @e[tag=Cloudia] run data modify entity @s Item.tag merge from storage island:data Cloudia
 
 execute as @e[tag=Island] run data modify entity @s {} merge from storage template:item Base
+execute as @e[tag=Island] run data modify entity @s CustomNameVisible set value true
 execute as @e[tag=Island] store result entity @s Pos[0] double 1 run data get entity @s Item.tag.Center[0] 1
 execute as @e[tag=Island] store result entity @s Pos[2] double 1 run data get entity @s Item.tag.Center[1] 1
 execute as @e[tag=Central] at @s align xyz run tp @s ~0.5 ~ ~0.5 ~ ~
