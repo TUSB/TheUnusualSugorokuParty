@@ -9,27 +9,27 @@ execute at 0-0-4-0-4 run data modify storage inventory:data Class set from block
 # 頭
 data remove block 2 0 2 Items[]
 data modify block 2 0 2 Items append from storage inventory:data Class.Head
-loot replace entity @s armor.head mine 2 0 2 minecraft:debug_stick
+loot replace entity @s armor.head 1 mine 2 0 2 minecraft:debug_stick
 
 # 胴
 data remove block 2 0 2 Items[]
 data modify block 2 0 2 Items append from storage inventory:data Class.Chest
-loot replace entity @s armor.chest mine 2 0 2 minecraft:debug_stick
+loot replace entity @s armor.chest 1 mine 2 0 2 minecraft:debug_stick
 
-# 胴
+# 脚
 data remove block 2 0 2 Items[]
 data modify block 2 0 2 Items append from storage inventory:data Class.Legs
-loot replace entity @s armor.legs mine 2 0 2 minecraft:debug_stick
+loot replace entity @s armor.legs 1 mine 2 0 2 minecraft:debug_stick
 
 # 足
 data remove block 2 0 2 Items[]
 data modify block 2 0 2 Items append from storage inventory:data Class.Feet
-loot replace entity @s armor.feet mine 2 0 2 minecraft:debug_stick
+loot replace entity @s armor.feet 1 mine 2 0 2 minecraft:debug_stick
 
 # オフハンド
 data remove block 2 0 2 Items[]
 data modify block 2 0 2 Items append from storage inventory:data Class.Offhand
-loot replace entity @s weapon.offhand mine 2 0 2 minecraft:debug_stick
+loot replace entity @s weapon.offhand 1 mine 2 0 2 minecraft:debug_stick
 
 # ホットバー
 data modify block 2 0 2 Items set from storage inventory:data Class.Hotbar
