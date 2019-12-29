@@ -13,4 +13,3 @@ execute store result entity @s Pos[2] double 0.01 run scoreboard players get _ Z
 execute at @s rotated as 0-0-2-0-2 run tp @s ~ ~ ~ ~ ~
 
 function piece:apply_offset
-execute at @s run tp @e[tag=PieceFlag,tag=Active,limit=1] ~ ~ ~ ~ ~
