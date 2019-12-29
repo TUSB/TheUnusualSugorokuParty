@@ -21,5 +21,6 @@ function island:init
 function random:init
 function piece:init
 function turn:init
+function inventory:init
 
 say ロードしました。
