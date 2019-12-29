@@ -1,5 +1,8 @@
 ### 商人が湧いた時
 
+# 商人を散開
+execute at 0-0-3-0-3 run spreadplayers ~ ~ 0 8 false @a[tag=Staff]
+
 # スポナーを戻す
 tp 0-0-3-0-3 0 0 0
 
