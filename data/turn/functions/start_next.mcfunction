@@ -15,6 +15,10 @@ execute as @a if score @s Turn = $Piece Turn run tag @s add Active
 tag @e[tag=Piece] remove Active
 execute as @e[tag=Piece] if score @s Turn = $Piece Turn run tag @s add Active
 
+# 駒光らせる
+execute as @e[tag=Piece] run data merge entity @s {Glowing:false}
+execute as @e[tag=Piece,tag=Active] run data merge entity @s {Glowing:true}
+
 # エフェクトリセット
 effect clear @a
 effect give @a minecraft:saturation 1 20
