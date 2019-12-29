@@ -12,7 +12,7 @@ data modify entity 0-0-2-0-2 {} merge from storage template:item Base
 
 summon minecraft:spawner_minecart 0 0 0 {Tags:[CommonSpawner],MaxNearbyEntities:32s,RequiredPlayerRange:32s,SpawnCount:0s,SpawnData:{id:"tusp:empty"},MaxSpawnDelay:32767s,Delay:0s,SpawnRange:8s,MinSpawnDelay:32767s,SpawnPotentials:[{Entity:{id:"tusp:empty"},Weight:1}],UUIDMost:3L,UUIDLeast:3L,Invulnerable:true,NoGravity:true}
 
-summon minecraft:area_effect_cloud 2 0 2 {Tags:[InventoryCursor],Radius:0f,UUIDMost:4L,UUIDLeast:4L}
+summon minecraft:area_effect_cloud 2 0 2 {Tags:[InventoryCursor],Radius:0f,UUIDMost:4L,UUIDLeast:4L,CustomName:"\"カーソル\"",CustomNameVisible:true}
 data modify entity 0-0-4-0-4 {} merge from storage template:area_effect_cloud Base
 
 function dice:init
