@@ -12,13 +12,9 @@
                         "name":"minecraft:contents",
                         "conditions": [
                             {
-                                "condition": "minecraft:location_check",
+                                "condition": "minecraft:match_tool",
                                 "predicate":{
-                                    "position": {
-                                        "x": 2,
-                                        "y": 0,
-                                        "z": 2
-                                    }
+                                  "item": "minecraft:debug_stick"
                                 }
                             }
                         ]
