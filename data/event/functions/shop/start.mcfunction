@@ -18,8 +18,8 @@ data modify entity 0-0-3-0-3 SpawnData set from storage shop:stock Staff
 # ここから未修正
 execute as @a at @s run function sounds:shop_found
 title @a times 0 100 0
-execute unless entity @a[tag=Active,tag=!Leader] run title @a subtitle [{"selector":"@a[tag=Active,tag=Leader,limit=1]"},"は商人に出会った！！"]
-execute if entity @a[tag=Active,tag=!Leader] run title @a subtitle [{"selector":"@a[tag=Active,tag=Leader,limit=1]"},"たちは商人に出会った！！"]
+execute unless entity @a[tag=Active,tag=!Leader] run title @a subtitle ["",{"selector":"@a[tag=Active,tag=Leader,limit=1]"},"は商人に出会った！！"]
+execute if entity @a[tag=Active,tag=!Leader] run title @a subtitle ["",{"selector":"@a[tag=Active,tag=Leader,limit=1]"},"たちは商人に出会った！！"]
 title @a title {"text":"はぁん","bold":true,"color":"green"}
 
 schedule function event:shop/enter 2s replace
