@@ -22,8 +22,6 @@ scoreboard players set #Origin Z -108650
 
 scoreboard objectives remove Turn
 scoreboard objectives add Turn dummy
-# 仮で定義
-scoreboard players set $PieceCount Turn 4
 
 summon minecraft:armor_stand 0 0 0 {Tags:[Piece],ArmorItems:[{},{},{},{id:"minecraft:red_banner",Count:1b}],Team:Red}
 summon minecraft:armor_stand 0 0 0 {Tags:[Piece],ArmorItems:[{},{},{},{id:"minecraft:green_banner",Count:1b}],Team:Green}

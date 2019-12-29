@@ -4,6 +4,8 @@ scoreboard players reset * InventoryID
 execute as @a[team=!] store result score @s InventoryID run scoreboard players add _ InventoryID 1
 
 scoreboard players reset * Turn
+# 仮定義
+scoreboard players set $PieceCount Turn 4
 scoreboard players set _ Turn -1
 execute as @e[tag=Piece,sort=random] store result score @s Turn run scoreboard players add _ Turn 1
 
