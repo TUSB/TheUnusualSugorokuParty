@@ -10,5 +10,5 @@ function event:lottery/draw
 data modify entity 0-0-3-0-3 SpawnData set from storage lottery:pool Item.tag.EntityTag.SpawnData
 
 # 演出開始
-scoreboard players set Title Times 0
+scoreboard players set $Title Times 0
 function event:battle/title
