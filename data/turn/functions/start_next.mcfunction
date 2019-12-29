@@ -15,6 +15,9 @@ execute as @a if score @s Turn = $Piece Turn run tag @s add Active
 tag @e[tag=Piece] remove Active
 execute as @e[tag=Piece] if score @s Turn = $Piece Turn run tag @s add Active
 
+# エフェクトリセット
+effect clear @a
+
 # 行動プレイヤーの設定
 gamemode spectator @a[tag=!Active]
 function piece:call_player
