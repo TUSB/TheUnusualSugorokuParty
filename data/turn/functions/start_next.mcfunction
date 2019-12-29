@@ -26,7 +26,7 @@ function piece:call_player
 tag @e[tag=Dice] remove Active
 tag @e[tag=Dice] add Undeterminated
 tag @e[tag=Dice1] add Active
-tag @e[tag=Dice2] add Active
+# tag @e[tag=Dice2] add Active
 
 scoreboard players reset @a Jump
 schedule function dice:cast 1t replace
