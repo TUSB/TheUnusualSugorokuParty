@@ -6,6 +6,6 @@ execute unless entity @a[tag=Active,tag=!Leader] run title @a subtitle [{"select
 execute if entity @a[tag=Active,tag=!Leader] run title @a subtitle [{"selector":"@a[tag=Active,tag=Leader,limit=1]"},"たちは敵に見つかった！！"]
 title @a title {"text":"やばい！","color":"gold","bold":true}
 
-scoreboard players add Title Times 1
-execute if score Title Times matches ..2 run schedule function event:battle/title 20t replace
-execute if score Title Times matches 3.. run schedule function event:battle/encount_roll 30t replace
+scoreboard players add $Title Times 1
+execute if score $Title Times matches ..2 run schedule function event:battle/title 20t replace
+execute if score $Title Times matches 3.. run schedule function event:battle/encount_roll 30t replace
