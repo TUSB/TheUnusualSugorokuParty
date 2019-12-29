@@ -6,6 +6,7 @@ kill 0-0-3-0-3
 kill 0-0-4-0-4
 kill @e[tag=Dice]
 kill @e[tag=Piece]
+kill @e[tag=PieceFlag]
 kill @e[tag=Island]
 kill @e[tag=EventEntity]
 kill @e[tag=Treasure]

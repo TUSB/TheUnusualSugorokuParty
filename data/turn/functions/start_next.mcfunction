@@ -2,9 +2,11 @@
 
 # ターンを進める
 execute as @e[tag=Piece] run function piece:ignore_offset
+execute as @e[tag=PieceFlag] run function piece:ignore_offset
 execute store result score $Piece Turn run scoreboard players add $Current Turn 1
 scoreboard players operation $Piece Turn %= $PieceCount Turn
 execute as @e[tag=Piece] run function piece:apply_offset
+execute as @e[tag=PieceFlag] run function piece:apply_offset
 
 # デバッグ用
 scoreboard players operation @a[tag=Debugger] Turn = $Piece Turn
