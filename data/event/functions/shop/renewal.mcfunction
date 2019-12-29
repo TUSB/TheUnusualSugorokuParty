@@ -1,6 +1,7 @@
 ### メニュー改定
 
 execute store result score _ Count run data get storage shop:stock Items[0].Slot 1
+data remove storage shop:stock Items[0].Slot
 
 execute if score _ Count matches 0 run data modify storage shop:stock Recipes[0].buy set from storage shop:stock Items[0]
 execute if score _ Count matches 1 run data modify storage shop:stock Recipes[1].buy set from storage shop:stock Items[0]

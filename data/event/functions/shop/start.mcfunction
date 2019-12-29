@@ -10,6 +10,11 @@ data modify storage shop:stock Recipes[] set value {maxUses:100, uses:0, xp:0, p
 function event:shop/renewal
 data remove storage shop:stock Recipes[{sell:{id:"minecraft:air"}}]
 
+# SpawnDataに入れる
+data modify storage shop:stock Staff set value {id:"minecraft:wandering_trader",Offers:{Recipes:[]},Tags:[Staff,EventEntity],Health:2f}
+data modify storage shop:stock Staff.Offers.Recipes set from storage shop:stock Recipes
+data modify entity 0-0-3-0-3 SpawnData set from storage shop:stock Staff
+
 # ここから未修正
 execute as @a at @s run function sounds:shop_found
 title @a times 0 100 0
@@ -17,4 +22,4 @@ execute unless entity @a[tag=Active,tag=!Leader] run title @a subtitle [{"select
 execute if entity @a[tag=Active,tag=!Leader] run title @a subtitle [{"selector":"@a[tag=Active,tag=Leader,limit=1]"},"たちは商人に出会った！！"]
 title @a title {"text":"はぁん","bold":true,"color":"green"}
 
-# schedule function event:treasure/await_pickup 2t replace
+schedule function event:shop/enter 2s replace
