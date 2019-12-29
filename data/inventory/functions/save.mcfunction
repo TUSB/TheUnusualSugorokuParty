@@ -5,7 +5,7 @@ data modify storage inventory:data Class set value {Head:{},Chest:{},Legs:{},Fee
 function inventory:classify
 
 # カーソル移動
-execute store result entity 0-0-4-0-4 Pos[0] double 1 run scoreboard players get @s InventoryID
+execute store result entity 0-0-4-0-4 Pos[1] double 1 run scoreboard players get @s InventoryID
 
 # セーブ
 execute at 0-0-4-0-4 unless block ~ ~ ~ minecraft:jukebox run setblock ~ ~ ~ minecraft:jukebox replace
