@@ -25,6 +25,10 @@ execute as @e[tag=Island,tag=Central,limit=1] run function island:set_start
 execute as @e[tag=Piece] run function piece:set_location
 execute as @e[tag=PieceFlag] run function piece:set_location
 
+# リスポーン地点設定
+execute as @e[tag=Piece,scores={Turn=0},limit=1] at @s positioned ^-1 ^ ^-3 run tp @a[team=!] ~ ~ ~
+execute as @a[team=!] at @s run spawnpoint @s ~ ~ ~
+
 # リーダー順決定
 scoreboard players reset * Leader
 scoreboard players set _ Leader 0
