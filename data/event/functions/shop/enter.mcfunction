@@ -13,6 +13,7 @@ execute store result entity 0-0-3-0-3 Pos[2] double 0.01 run scoreboard players 
 execute as 0-0-3-0-3 at @s run spreadplayers ~ ~ 0 1 false @s
 execute store result entity 0-0-3-0-3 Pos[0] double 0.01 run scoreboard players get _ X
 execute store result entity 0-0-3-0-3 Pos[2] double 0.01 run scoreboard players get _ Z
+execute as 0-0-3-0-3 at @s run tp @s ~ ~3 ~
 # delay 0化
 data modify entity 0-0-3-0-3 Delay set value 0s
 
