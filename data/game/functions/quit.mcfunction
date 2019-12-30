@@ -1,5 +1,8 @@
 ### ゲームを終了する
 
+# チーム分け待ち解除
+schedule clear game:wait_grouping
+
 # とりあえず全スケジュール解除
 schedule clear dice:cast
 schedule clear piece:move
