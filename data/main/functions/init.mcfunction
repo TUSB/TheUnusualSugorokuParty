@@ -22,5 +22,6 @@ function random:init
 function piece:init
 function turn:init
 function inventory:init
+function game:init
 
 say ロードしました。

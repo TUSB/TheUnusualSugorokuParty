@@ -3,6 +3,10 @@
 scoreboard players reset * InventoryID
 execute as @a[team=!] store result score @s InventoryID run scoreboard players add _ InventoryID 1
 
+# 手持ち保存
+clear @a[team=!]
+execute as @a[team=!] run function inventory:save
+
 scoreboard players reset * Turn
 # 仮定義
 scoreboard players set $PieceCount Turn 4
