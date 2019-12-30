@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:bone_block"
+        },
+        "title": {
+            "text": "大きいサイコロ"
+        },
+        "description": {
+            "text": "サイコロの出る目が変わった。"
+        },
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "criteria": {
+        "recipe_book": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+                "item": "minecraft:knowledge_book",
+                "nbt": "{Recipes:[\"book:large_dice\"]}"
+            }
+        }
+    },
+    "rewards": {
+        "function": "book:small_dice"
+    }
+}
