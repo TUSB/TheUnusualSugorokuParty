@@ -15,7 +15,6 @@ clear @a[team=!]
 execute as @a[team=!] run function inventory:save
 
 scoreboard players reset * Turn
-# 仮定義
 scoreboard players set $PieceCount Turn -1
 execute if entity @a[team=Red] store result score @e[tag=Red,tag=Piece,limit=1] Turn run scoreboard players add $PieceCount Turn 1
 team join Green @a[tag=Debugger]
@@ -24,6 +23,7 @@ team join Blue @a[tag=Debugger]
 execute if entity @a[team=Blue] store result score @e[tag=Blue,tag=Piece,limit=1] Turn run scoreboard players add $PieceCount Turn 1
 team join Yellow @a[tag=Debugger]
 execute if entity @a[team=Yellow] store result score @e[tag=Yellow,tag=Piece,limit=1] Turn run scoreboard players add $PieceCount Turn 1
+scoreboard players add $PieceCount Turn 1
 
 scoreboard players operation @a[team=Red] Turn = @e[tag=Piece,tag=Red,limit=1] Turn
 scoreboard players operation @a[team=Green] Turn = @e[tag=Piece,tag=Green,limit=1] Turn
