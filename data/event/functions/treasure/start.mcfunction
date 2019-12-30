@@ -11,6 +11,7 @@ function event:lottery/draw
 execute at @e[tag=Piece,tag=Active,limit=1] positioned ^-1 ^ ^-1 run summon minecraft:item ~ ~5 ~ {Tags:[Treasure,EventEntity],Item:{id:"minecraft:emerald",Count:1b},PickupDelay:40s}
 execute as @e[tag=Treasure] run data modify entity @s {} merge from storage template:item Treasure
 execute as @e[tag=Treasure] run data modify entity @s Item set from storage lottery:pool Item
+execute if data storage lottery:pool Item.tag.display.Name as @e[tag=Treasure] run data modify entity @s CustomName set from storage lottery:pool Item.tag.display.Name
 
 execute as @a at @s run function sounds:treasure_found
 title @a times 0 100 0
