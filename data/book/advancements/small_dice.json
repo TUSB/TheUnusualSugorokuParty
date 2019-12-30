@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:bone_block"
+        },
+        "title": {
+            "text": "小さいサイコロ"
+        },
+        "description": {
+            "text": "サイコロの出る目が変わった。"
+        },
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "criteria": {
+        "recipe_unlocked": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "book:small_dice"
+            }
+        }
+    },
+    "rewards": {
+        "function": "book:small_dice"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "type": "crafting_shapeless",
+    "group": "dice_enchant",
+    "ingredients": [
+        {
+            "item": "minecraft:debug_stick"
+        }
+    ],
+    "result": {
+        "item": "minecraft:debug_stick"
+    }
+}
