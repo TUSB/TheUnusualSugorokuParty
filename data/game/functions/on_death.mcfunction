@@ -7,6 +7,11 @@ title @a times 0 100 0
 execute unless entity @a[team=Active,scores={Leader=1..}] run title @a subtitle ["次の",{"selector":"@a[team=Active,scores={Leader=0},limit=1]"},"はきっとうまくやってくれるでしょう"]
 execute if entity @a[team=Active,scores={Leader=1..}] run title @a subtitle ["次の",{"selector":"@a[team=Active,scores={Leader=0},limit=1]"},"たちはきっとうまくやってくれるでしょう"]
 title @a title {"text":"全滅","color":"red","bold":true}
+
+# アイテムリセットを確実にする
+scoreboard players add * Death 1
+scoreboard players reset @a[team=!Active] Death
+
 team empty Active
 
 execute as @e[tag=Island,tag=Central,limit=1] run function island:set_start
