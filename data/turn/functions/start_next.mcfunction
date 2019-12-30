@@ -44,6 +44,8 @@ execute as @e[tag=Piece,tag=Active] run data merge entity @s {Glowing:true}
 # 行動プレイヤーの設定
 gamemode spectator @a
 function piece:call_player
+execute as @a[gamemode=spectator] at @s positioned as @a[team=Active,gamemode=!spectator,limit=1] run tp @s ^ ^ ^-7
+execute as @a[team=Active] at @s run 
 tag @e[tag=Dice] add Undeterminated
 tag @e[tag=Dice1] add Active
 # tag @e[tag=Dice2] add Active
