@@ -16,12 +16,11 @@
         "recipe_book": {
             "trigger": "minecraft:consume_item",
             "conditions": {
-                "item": "minecraft:knowledge_book",
-                "nbt": "{Recipes:[\"book:large_dice\"]}"
+                "item": "minecraft:knowledge_book"
             }
         }
     },
     "rewards": {
-        "function": "book:small_dice"
+        "function": "book:large_dice"
     }
 }
