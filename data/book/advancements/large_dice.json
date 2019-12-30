@@ -16,7 +16,9 @@
         "recipe_book": {
             "trigger": "minecraft:consume_item",
             "conditions": {
-                "item": "minecraft:wandering_trader_spawn_egg"
+                "item": {
+                    "item": "minecraft:knowledge_book"
+                }
             }
         }
     },
