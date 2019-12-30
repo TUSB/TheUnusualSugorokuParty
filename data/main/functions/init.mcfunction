@@ -24,4 +24,7 @@ function turn:init
 function inventory:init
 function game:init
 
+scoreboard objectives add HP health
+scoreboard objectives setdisplay belowname HP
+
 say ロードしました。

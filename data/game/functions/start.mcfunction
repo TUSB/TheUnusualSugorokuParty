@@ -1,5 +1,8 @@
 ### 新しいゲームを開始する
 
+# HP表示正常化
+effect give @a minecraft:absorption 1 0 true
+
 # チーム分け待ち解除
 schedule clear game:wait_grouping
 scoreboard objectives setdisplay sidebar
