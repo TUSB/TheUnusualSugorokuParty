@@ -1,5 +1,9 @@
 ### ターン開始
 
+# スライム系残ったの消す
+execute as @e[type=minecraft:slime,tag=!Enemy] at @s run tp @s ~ -100 ~
+execute as @e[type=minecraft:magma_cube,tag=!Enemy] at @s run tp @s ~ -100 ~
+
 # ターンを進める
 execute as @e[tag=Piece] run function piece:ignore_offset
 execute as @e[tag=PieceFlag] run function piece:ignore_offset
