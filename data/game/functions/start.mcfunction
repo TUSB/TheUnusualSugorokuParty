@@ -22,5 +22,16 @@ execute as @e[tag=Island,tag=Central,limit=1] run function island:set_start
 execute as @e[tag=Piece] run function piece:set_location
 execute as @e[tag=PieceFlag] run function piece:set_location
 
+# リーダー順決定
+scoreboard players reset * Leader
+scoreboard players set _ Leader 0
+execute as @a[team=Red] store result score @s Leader run scoreboard players add _ Leader 1
+scoreboard players set _ Leader 0
+execute as @a[team=Green] store result score @s Leader run scoreboard players add _ Leader 1
+scoreboard players set _ Leader 0
+execute as @a[team=Blue] store result score @s Leader run scoreboard players add _ Leader 1
+scoreboard players set _ Leader 0
+execute as @a[team=Yellow] store result score @s Leader run scoreboard players add _ Leader 1
+
 scoreboard players set $Current Turn -1
 function turn:start_next

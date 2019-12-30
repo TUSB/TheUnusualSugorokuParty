@@ -25,6 +25,7 @@ scoreboard players set #Origin Z -108650
 
 scoreboard objectives remove Turn
 scoreboard objectives add Turn dummy
+scoreboard objectives add Leader dummy {"text":"0ならリーダー"}
 
 summon minecraft:armor_stand 0 0 0 {Tags:[Piece],Team:Red,ArmorItems:[{tag:{Unbreakable:true,display:{color:11152160}},id:"minecraft:leather_boots",Count:1b},{tag:{Unbreakable:true,display:{color:11152160}},id:"minecraft:leather_leggings",Count:1b},{tag:{Unbreakable:true,display:{color:11152160}},id:"minecraft:leather_chestplate",Count:1b},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:"44648d67-1753-49f3-8869-8084cfb810a1",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDIxYzFlMWY4NTY4ZDQxMTUwY2I3ZmY0YmJjMjZiYTU4YThiNDNiY2Y2NmI5ZDQzZGU2NmM1YTMwZTY4MzZiNyJ9fX0="}]}}}}],ShowArms:1b}
 summon minecraft:armor_stand 0 0 0 {Tags:[Piece],Team:Green,ArmorItems:[{tag:{Unbreakable:true,display:{color:5729553}},id:"minecraft:leather_boots",Count:1b},{tag:{Unbreakable:true,display:{color:5729553}},id:"minecraft:leather_leggings",Count:1b},{tag:{Unbreakable:true,display:{color:5729553}},id:"minecraft:leather_chestplate",Count:1b},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:"0a36e52c-c7d8-473a-bf42-01e5a368fa38",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2E1NWQ5ZGY4M2EzMmM0YmNiNzk3Mjc2YjAxMTdlMGNmNjg1MzcyYzkyNzhkZTg5MmE5ZTJjODRkY2ZmNDU1In19fQ=="}]}}}}],ShowArms:1b}

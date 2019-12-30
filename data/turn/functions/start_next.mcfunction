@@ -24,6 +24,15 @@ execute as @a if score @s Turn = $Piece Turn run team join Active @s
 execute as @e[tag=Piece] if score @s Turn = $Piece Turn run tag @s add Active
 execute as @e[tag=PieceFlag] if score @s Turn = $Piece Turn run tag @s add Active
 
+# リーダー設定
+scoreboard players set _ Leader -2147483648
+scoreboard players operation _ Leader > @a[team=Active] Leader
+execute as @a[team=Active] if score @s Leader = _ Leader run scoreboard players operation @s Leader = _ InventoryID
+scoreboard players set _ Leader -2147483648
+scoreboard players operation _ Leader > @a[team=Active] Leader
+scoreboard players operation * Leader -= _ Leader
+effect give @a[team=Active,scores={Leader=0}] minecraft:glowing 300 0 true
+
 # 駒光らせる
 execute as @e[tag=Piece] run data merge entity @s {Glowing:false}
 execute as @e[tag=Piece,tag=Active] run data merge entity @s {Glowing:true}
@@ -31,7 +40,6 @@ execute as @e[tag=Piece,tag=Active] run data merge entity @s {Glowing:true}
 # 行動プレイヤーの設定
 gamemode spectator @a
 function piece:call_player
-
 tag @e[tag=Dice] add Undeterminated
 tag @e[tag=Dice1] add Active
 # tag @e[tag=Dice2] add Active
