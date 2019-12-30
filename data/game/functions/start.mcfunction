@@ -1,5 +1,8 @@
 ### 新しいゲームを開始する
 
+team empty Active
+team join Red @a[tag=Debugger,team=]
+
 scoreboard players reset * InventoryID
 execute as @a[team=!] store result score @s InventoryID run scoreboard players add _ InventoryID 1
 
@@ -32,6 +35,9 @@ scoreboard players set _ Leader 0
 execute as @a[team=Blue] store result score @s Leader run scoreboard players add _ Leader 1
 scoreboard players set _ Leader 0
 execute as @a[team=Yellow] store result score @s Leader run scoreboard players add _ Leader 1
+
+# 死亡処理監視
+schedule function game:observe_death 2t replace
 
 scoreboard players set $Current Turn -1
 function turn:start_next
