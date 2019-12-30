@@ -11,7 +11,7 @@ function event:shop/renewal
 data remove storage shop:stock Recipes[{sell:{id:"minecraft:air"}}]
 
 # SpawnDataに入れる
-data modify storage shop:stock Staff set value {id:"minecraft:wandering_trader",Offers:{Recipes:[]},Tags:[Staff,EventEntity]}
+data modify storage shop:stock Staff set value {id:"minecraft:wandering_trader",Offers:{Recipes:[]},Tags:[Staff,EventEntity],Glowing:true}
 data modify storage shop:stock Staff.Offers.Recipes set from storage shop:stock Recipes
 data modify entity 0-0-3-0-3 SpawnData set from storage shop:stock Staff
 
