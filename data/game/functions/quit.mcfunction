@@ -14,5 +14,8 @@ title @a times 0 0 0
 # タイマーを消す
 function event:timer/finish
 
+# エフェクト消す
+effect clear @a
+
 # デバッグ用
 gamemode creative @a[tag=Debugger]

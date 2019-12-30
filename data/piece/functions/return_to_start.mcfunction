@@ -1,6 +1,6 @@
 ### 拠点に戻る
 
-function island:set_start
+execute as @e[tag=Island,tag=Central,limit=1] run function island:set_start
 
 scoreboard players set $Sum Dice 0
 
