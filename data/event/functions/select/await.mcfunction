@@ -18,7 +18,7 @@ execute if score _ Choice matches 1.. run function event:select/yes
 execute if score _ Choice matches ..-1 run function event:select/no
 execute unless score _ Choice = _ Choice run function event:select/neutral
 
-execute if score _ Choice = _ Choice if entity @a[team=Active,scores={Leader=0},scores={Jump=1..}] run scoreboard players operation $Selected Choice = _ Choice
+execute if score _ Choice = _ Choice if entity @a[team=Active,scores={Leader=0,Jump=1..}] run scoreboard players operation $Selected Choice = _ Choice
 scoreboard players reset @a Jump
 
 execute unless score $Selected Choice = $Selected Choice run schedule function event:select/await 1t replace
