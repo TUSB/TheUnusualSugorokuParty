@@ -12,6 +12,9 @@ team modify Red collisionRule never
 team modify Green collisionRule never
 team modify Blue collisionRule never
 team modify Yellow collisionRule never
+team add Active
+team modify Active color white
+team modify Active collisionRule never
 
 scoreboard objectives add X dummy {"text":"X(cm)"}
 scoreboard objectives add Z dummy {"text":"Z(cm)"}

@@ -17,7 +17,7 @@ execute store result entity 0-0-3-0-3 Pos[2] double 0.01 run scoreboard players 
 data modify entity 0-0-3-0-3 Delay set value 0s
 
 # プレイヤー呼ぶ
-execute at 0-0-3-0-3 run spreadplayers ~ ~ 0 1 false @a[tag=Active]
+execute at 0-0-3-0-3 run spreadplayers ~ ~ 0 1 false @a[team=Active]
 
 # スポーン待ちに入る
 schedule function event:battle/before_spawning 1t replace

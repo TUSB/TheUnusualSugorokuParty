@@ -14,12 +14,13 @@ scoreboard players operation @a[tag=Debugger] Turn = $Piece Turn
 # リセット
 execute as @a[scores={Death=1..}] run function inventory:load
 scoreboard players reset @a Death
+team empty Active
 tag @e[tag=Active] remove Active
 effect clear @a
 effect give @a minecraft:saturation 1 20
 
 # 行動タグ付け
-execute as @a if score @s Turn = $Piece Turn run tag @s add Active
+execute as @a if score @s Turn = $Piece Turn run team join Active @s
 execute as @e[tag=Piece] if score @s Turn = $Piece Turn run tag @s add Active
 execute as @e[tag=PieceFlag] if score @s Turn = $Piece Turn run tag @s add Active
 
@@ -28,7 +29,7 @@ execute as @e[tag=Piece] run data merge entity @s {Glowing:false}
 execute as @e[tag=Piece,tag=Active] run data merge entity @s {Glowing:true}
 
 # 行動プレイヤーの設定
-gamemode spectator @a[tag=!Active]
+gamemode spectator @a
 function piece:call_player
 
 tag @e[tag=Dice] add Undeterminated

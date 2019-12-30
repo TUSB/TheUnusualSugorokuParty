@@ -14,8 +14,8 @@ execute as @e[tag=Treasure] run data modify entity @s Item set from storage lott
 
 execute as @a at @s run function sounds:treasure_found
 title @a times 0 100 0
-execute unless entity @a[tag=Active,tag=!Leader] run title @a subtitle ["",{"selector":"@a[tag=Active,tag=Leader,limit=1]"},"は宝箱を発見した！！"]
-execute if entity @a[tag=Active,tag=!Leader] run title @a subtitle ["",{"selector":"@a[tag=Active,tag=Leader,limit=1]"},"たちは宝箱を発見した！！"]
+execute unless entity @a[team=Active,tag=!Leader] run title @a subtitle ["",{"selector":"@a[team=Active,tag=Leader,limit=1]"},"は宝箱を発見した！！"]
+execute if entity @a[team=Active,tag=!Leader] run title @a subtitle ["",{"selector":"@a[team=Active,tag=Leader,limit=1]"},"たちは宝箱を発見した！！"]
 title @a title [{"selector":"@e[tag=Treasure]"}]
 
 schedule function event:treasure/await_pickup 2t replace
