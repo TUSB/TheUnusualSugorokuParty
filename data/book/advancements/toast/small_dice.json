@@ -9,18 +9,15 @@
         "description": {
             "text": "小さいサイコロを使った！"
         },
-        "show_toast": false,
+        "show_toast": true,
         "announce_to_chat": false
     },
     "criteria": {
         "recipe_unlocked": {
-            "trigger": "minecraft:recipe_unlocked",
-            "conditions": {
-                "recipe": "book:large_dice"
-            }
+            "trigger": "minecraft:impossible"
         }
     },
     "rewards": {
-        "function": "book:large_dice"
+        "function": "book:toast/small_dice"
     }
 }

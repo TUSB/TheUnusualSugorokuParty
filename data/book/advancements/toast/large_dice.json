@@ -1,0 +1,23 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:bone_block"
+        },
+        "title": {
+            "text": "大きいサイコロを使った！"
+        },
+        "description": {
+            "text": "大きいサイコロを使った！"
+        },
+        "show_toast": true,
+        "announce_to_chat": false
+    },
+    "criteria": {
+        "recipe_unlocked": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "book:toast/large_dice"
+    }
+}

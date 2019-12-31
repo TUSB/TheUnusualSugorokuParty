@@ -45,9 +45,9 @@ gamemode spectator @a
 function piece:call_player
 execute as @a[gamemode=spectator] at @s positioned as @a[team=Active,gamemode=!spectator,limit=1] run tp @s ^ ^ ^-7
 execute as @a[team=Active] at @s run function sounds:my_turn
-tag @e[tag=Dice] add Undeterminated
-tag @e[tag=Dice1] add Active
-# tag @e[tag=Dice2] add Active
+
+# サイコロリセット
+function dice:reset_dice
 
 scoreboard players reset @a Jump
 schedule function dice:cast 1t replace
