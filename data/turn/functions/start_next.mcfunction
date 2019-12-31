@@ -35,6 +35,9 @@ execute as @a[team=Active] if score @s Leader = _ Leader run scoreboard players 
 scoreboard players set _ Turn 2147483647
 scoreboard players operation _ Turn < @a[team=Active] Leader
 scoreboard players operation * Leader -= _ Turn
+tag @a[team=Active,scores={Leader=0},limit=1] add Leader
+scoreboard players add @a[team=Active,tag=!Leader] Leader 1
+tag @a[tag=Leader] remove Leader
 effect give @a[team=Active,scores={Leader=0}] minecraft:glowing 300 0 true
 
 # 駒光らせる
