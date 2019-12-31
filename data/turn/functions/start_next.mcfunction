@@ -1,5 +1,8 @@
 ### ターン開始
 
+# タイマー残ってたら消す
+function event:timer/finish
+
 # ターンを進める
 execute as @e[tag=Piece] run function piece:ignore_offset
 execute as @e[tag=PieceFlag] run function piece:ignore_offset
