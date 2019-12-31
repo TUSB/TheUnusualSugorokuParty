@@ -27,4 +27,4 @@ function game:init
 scoreboard objectives add HP health
 scoreboard objectives setdisplay belowname HP
 
-say ロードしました。
+function game:prepare

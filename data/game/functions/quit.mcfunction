@@ -1,5 +1,8 @@
 ### ゲームを終了する
 
+# Turnクリア
+scoreboard players reset * Turn
+
 # チーム分け待ち解除
 schedule clear game:wait_grouping
 
