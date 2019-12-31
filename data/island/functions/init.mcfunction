@@ -11,7 +11,7 @@ data modify storage island:data TNT set value {Center:[20,4],Start:[22,7]}
 data modify storage island:data Cloudia set value {Center:[11,4],Start:[8,7]}
 # data modify storage island:data End set value {Center:[],Start:[11,11]}
 
-summon minecraft:item 0 0 0 {Item:{id:"minecraft:iron_sword",Count:1b,tag:{}},Tags:[Island,Central],CustomName:"{\"text\":\"中央\"}"}
+summon minecraft:item 0 0 0 {Item:{id:"minecraft:iron_sword",Count:1b,tag:{}},Tags:[Island,Central],CustomName:"{\"text\":\"END\"}"}
 execute as @e[tag=Central] run data modify entity @s Item.tag merge from storage island:data Central
 summon minecraft:item 0 0 0 {Item:{id:"minecraft:iron_sword",Count:1b,tag:{}},Tags:[Island,Village],CustomName:"{\"text\":\"交易島\"}"}
 execute as @e[tag=Village] run data modify entity @s Item.tag merge from storage island:data Village
