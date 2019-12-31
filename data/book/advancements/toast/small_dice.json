@@ -10,7 +10,7 @@
             "text": "小さいサイコロを使った！"
         },
         "show_toast": true,
-        "announce_to_chat": false
+        "announce_to_chat": true
     },
     "criteria": {
         "recipe_unlocked": {
