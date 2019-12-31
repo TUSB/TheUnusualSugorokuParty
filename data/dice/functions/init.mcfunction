@@ -15,6 +15,12 @@ data modify storage dice:types medium set value {Dices:[3,4,3,4,3,4]}
 data modify storage dice:types greater set value {Dices:[5,6,5,6,5,6]}
 data modify storage dice:types odd set value {Dices:[1,3,5,1,3,5]}
 data modify storage dice:types even set value {Dices:[2,4,6,2,4,6]}
+data modify storage dice:types one set value {Dices:[1,1,1,1,1,1]}
+data modify storage dice:types two set value {Dices:[2,2,2,2,2,2]}
+data modify storage dice:types three set value {Dices:[3,3,3,3,3,3]}
+data modify storage dice:types four set value {Dices:[4,4,4,4,4,4]}
+data modify storage dice:types five set value {Dices:[5,5,5,5,5,5]}
+data modify storage dice:types six set value {Dices:[6,6,6,6,6,6]}
 
 kill @e[tag=Dice]
 execute at 0-0-1-0-1 run summon minecraft:item ~ ~1 ~ {Item:{id:"minecraft:cake",Count:1b,tag:{}},Tags:[Dice,Dice1]}
