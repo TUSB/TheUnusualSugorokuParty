@@ -4,10 +4,10 @@
             "item": "minecraft:bone_block"
         },
         "title": {
-            "text": "小さいサイコロを使った！"
+            "text": "大サイコロを使った！"
         },
         "description": {
-            "text": "小さいサイコロを使った！"
+            "text": "大サイコロを使った！"
         },
         "show_toast": false,
         "announce_to_chat": false

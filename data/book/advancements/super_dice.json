@@ -4,10 +4,10 @@
             "item": "minecraft:bone_block"
         },
         "title": {
-            "text": "小サイコロを使った！"
+            "text": "超サイコロを使った！"
         },
         "description": {
-            "text": "小サイコロを使った！"
+            "text": "超サイコロを使った！"
         },
         "show_toast": false,
         "announce_to_chat": false
@@ -16,11 +16,11 @@
         "recipe_unlocked": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "book:small_dice"
+                "recipe": "book:super_dice"
             }
         }
     },
     "rewards": {
-        "function": "book:small_dice"
+        "function": "book:super_dice"
     }
 }
