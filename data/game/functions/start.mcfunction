@@ -2,6 +2,7 @@
 
 # HP表示正常化
 effect give @a minecraft:absorption 1 0 true
+effect give @a minecraft:instant_health 1 10 true
 
 # チーム分け待ち解除
 schedule clear game:wait_grouping
