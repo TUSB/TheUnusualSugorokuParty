@@ -11,3 +11,4 @@ execute if block ~ ~ ~ minecraft:emerald_ore run function event:special_dice/sta
 execute if block ~ ~ ~ minecraft:diamond_ore run function event:extra_dice/start
 execute if block ~ ~ ~ minecraft:barrel run function event:dice_pack/start
 execute if block ~ ~ ~ minecraft:end_stone run function event:end_portal/start
+execute if block ~ ~ ~ minecraft:redstone_block run function event:end_battle/start
