@@ -54,4 +54,4 @@ scoreboard players reset @a Jump
 schedule function dice:cast 1t replace
 schedule function turn:before_move 2t replace
 
-execute unless entity @a[team=Active] run schedule function turn:start_next 1s replace
+execute unless entity @a[team=Active] run function turn:pass
