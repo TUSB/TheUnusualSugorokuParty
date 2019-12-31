@@ -1,6 +1,6 @@
 ### 初期化
 
-data modify storage island:data Central set value {Center:[15,15],Start:[9,9],Goal:[13,11]}
+data modify storage island:data Central set value {Center:[15,15],Start:[9,9],Goal:[13,11],Start2:[11,11]}
 data modify storage island:data Village set value {Center:[4,11],Start:[7,8]}
 data modify storage island:data UnderGround set value {Center:[4,20],Start:[7,22]}
 data modify storage island:data PirateShip set value {Center:[11,27],Start:[8,23]}
