@@ -11,10 +11,10 @@ execute if entity @a[team=Active,scores={Leader=1..}] run title @a subtitle ["",
 title @a title ["福袋"]
 
 ### ダイスをランダム取得
-scoreboard players set #4 Count 4
+scoreboard players set #3 Count 4
 execute store result score $Fuku Count run function random:score/next
 scoreboard players operation $Fuku Count %= #4 Count
-scoreboard players add $Fuku Count 3
+scoreboard players add $Fuku Count 2
 function event:dice_pack/fukubukuro
 
 schedule function turn:start_next 2s replace
