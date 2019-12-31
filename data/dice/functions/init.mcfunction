@@ -7,7 +7,9 @@ scoreboard objectives add DiceMax dummy
 scoreboard players set #6 Dice 6
 
 data merge storage dice:names {empty:"{\"text\":\"\"}",dice1:"{\"text\":\" ⚀\"}",dice2:"{\"text\":\" ⚁\"}",dice3:"{\"text\":\" ⚂\"}",dice4:"{\"text\":\" ⚃\"}",dice5:"{\"text\":\" ⚄\"}",dice6:"{\"text\":\" ⚅\"}"}
-data merge storage dice:types {normal:{Dices:[1,2,3,4,5,6]},small:{Dices:[1,2,3,1,2,3],large:{Dices:[4,5,6,4,5,6]}}}
+data modify storage dice:types normal {Dices:[1,2,3,4,5,6]}
+data modify storage dice:types small {Dices:[1,2,3,1,2,3]}
+data modify storage dice:types large {Dices:[4,5,6,4,5,6]}
 
 kill @e[tag=Dice]
 execute at 0-0-1-0-1 run summon minecraft:item ~ ~1 ~ {Item:{id:"minecraft:cake",Count:1b,tag:{}},Tags:[Dice,Dice1]}
