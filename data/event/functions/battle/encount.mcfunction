@@ -2,6 +2,10 @@
 
 title @a times 0 0 20
 
+# スライム系残っていたら消す
+execute as @e[type=minecraft:slime,tag=!Enemy] at @s run tp @s ~ -100 ~
+execute as @e[type=minecraft:magma_cube,tag=!Enemy] at @s run tp @s ~ -100 ~
+
 # SpawnCount編集
 execute store result entity 0-0-3-0-3 SpawnCount short 1 run scoreboard players get $Sum Dice
 # Pos編集
