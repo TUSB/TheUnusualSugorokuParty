@@ -29,11 +29,11 @@ execute as @e[tag=Piece] if score @s Turn = $Piece Turn run tag @s add Active
 execute as @e[tag=PieceFlag] if score @s Turn = $Piece Turn run tag @s add Active
 
 # リーダー設定
-scoreboard players set _ Leader -2147483648
-scoreboard players operation _ Leader > @a[team=Active] Leader
+scoreboard players set _ Leader 2147483647
+scoreboard players operation _ Leader < @a[team=Active] Leader
 execute as @a[team=Active] if score @s Leader = _ Leader run scoreboard players operation @s Leader = _ InventoryID
-scoreboard players set _ Turn -2147483648
-scoreboard players operation _ Turn > @a[team=Active] Leader
+scoreboard players set _ Turn 2147483647
+scoreboard players operation _ Turn < @a[team=Active] Leader
 scoreboard players operation * Leader -= _ Turn
 effect give @a[team=Active,scores={Leader=0}] minecraft:glowing 300 0 true
 
