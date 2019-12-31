@@ -50,6 +50,9 @@ execute as @a[team=Active] at @s run function sounds:my_turn
 # サイコロリセット
 function dice:reset_dice
 
+# エンドだった場合の処理
+execute as @e[tag=Piece,tag=Active,limit=1] at @s positioned ^-1 ^ ^-1 if block ~ ~ ~ minecraft:redstone_block run function dice:reset_dice_one
+
 scoreboard players reset @a Jump
 schedule function dice:cast 1t replace
 schedule function turn:before_move 2t replace
