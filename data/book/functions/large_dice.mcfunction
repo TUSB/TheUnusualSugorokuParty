@@ -4,4 +4,4 @@ execute at 0-0-1-0-1 as @e[tag=Dice,tag=Active,tag=Undeterminated,sort=nearest,l
 
 advancement revoke @s only book:large_dice
 recipe take @s book:large_dice
-title @a actionbar [{"text":"","color":"green","bold":true},{"selector":"@s"},"は大サイコロを使った。"]
+title @a actionbar [{"text":"","color":"blue","bold":true},{"selector":"@s"},"は大サイコロを使った。"]
