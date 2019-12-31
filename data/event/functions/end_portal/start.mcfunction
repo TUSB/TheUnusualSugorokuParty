@@ -1,11 +1,5 @@
 ### エンドポータル発見時
 
-# 残り移動数リセット
-scoreboard players set $Sum Dice 0
-
-# プレイヤーを呼ぶ
-function piece:call_player
-
 # 次のターンへ移動はキャンセル
 schedule clear turn:start_next
 

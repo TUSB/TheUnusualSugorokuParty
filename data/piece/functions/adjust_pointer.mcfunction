@@ -8,4 +8,4 @@ execute as 0-0-2-0-2 at @s if block ~ 1 ~ minecraft:magenta_glazed_terracotta[fa
 execute as 0-0-2-0-2 at @s if block ~ 1 ~ minecraft:magenta_glazed_terracotta[facing=west] run tp @s ~ ~ ~ 270 0
 
 execute as 0-0-2-0-2 at @s if block ~ 1 ~ minecraft:bedrock as @e[tag=Island,tag=Central,limit=1] run function piece:return_to_start
-execute as 0-0-2-0-2 at @s if block ~ 1 ~ minecraft:end_portal_frame as @e[tag=Island,tag=Central,limit=1] run function event:end_portal/start
+execute as 0-0-2-0-2 at @s if block ~ 1 ~ minecraft:diamond_block as @e[tag=Island,tag=Central,limit=1] run scoreboard players set $Sum Dice 0
