@@ -11,6 +11,6 @@ execute store result score 緑 TeamCount run team list Green
 execute store result score 青 TeamCount run team list Blue
 execute store result score 黄 TeamCount run team list Yellow
 
-title @a actionbar [{"text":"","color":"white","bold":true},{"text":"赤","color":"red","bold":true},{"text":"・","color":"white","bold":true},{"text":"緑","color":"green","bold":true},{"text":"・","color":"white","bold":true},{"text":"青","color":"blue","bold":true},{"text":"・","color":"white","bold":true},{"text":"黄","color":"red","bold":true},{"text":"の中から好きなチームを選んでください。","color":"white","bold":true}]
+title @a actionbar [{"text":"","color":"white","bold":true},{"text":"赤","color":"red","bold":true},{"text":"・","color":"white","bold":true},{"text":"緑","color":"green","bold":true},{"text":"・","color":"white","bold":true},{"text":"青","color":"blue","bold":true},{"text":"・","color":"white","bold":true},{"text":"黄","color":"yellow","bold":true},{"text":"の中から好きなチームを選んでください。","color":"white","bold":true}]
 
 schedule function game:wait_grouping 1s replace
