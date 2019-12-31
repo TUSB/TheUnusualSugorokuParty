@@ -9,3 +9,4 @@ execute if block ~ ~ ~ minecraft:spawner run function event:battle/start
 execute if block ~ ~ ~ minecraft:bell run function event:shop/start
 execute if block ~ ~ ~ minecraft:emerald_ore run function event:special_dice/start
 execute if block ~ ~ ~ minecraft:diamond_ore run function event:extra_dice/start
+execute if block ~ ~ ~ minecraft:barrel run function event:dice_pack/start
