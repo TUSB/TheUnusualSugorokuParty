@@ -44,9 +44,6 @@ effect give @a[team=Active,scores={Leader=0}] minecraft:glowing 300 0 true
 execute as @e[tag=Piece] run data merge entity @s {Glowing:false}
 execute as @e[tag=Piece,tag=Active] run data merge entity @s {Glowing:true}
 
-# 付近のアイテム消す
-execute as @e[tag=Piece,tag=Active,limit=1] at @s positioned ^-1 ^ ^-1 run kill @e[distance=..5,type=minecraft:item]
-
 # 行動プレイヤーの設定
 gamemode spectator @a
 function piece:call_player
