@@ -1,8 +1,5 @@
 ### 手持ちを読み込み
 
-# カーソル移動
-execute store result entity 0-0-4-0-4 Pos[1] double 1 run scoreboard players get @s InventoryID
-
 # ロード
 execute at 0-0-4-0-4 run data modify storage inventory:data Class set from block ~ ~ ~ RecordItem.tag.Class
 
@@ -38,3 +35,6 @@ loot replace entity @s hotbar.0 9 mine 2 0 2 minecraft:debug_stick
 # インベントリ
 data modify block 2 0 2 Items set from storage inventory:data Class.Inventory
 loot replace entity @s inventory.0 27 mine 2 0 2 minecraft:debug_stick
+
+# 生存フラグを付ける
+execute at 0-0-4-0-4 run data modify block ~ ~ ~ RecordItem.tag.Alive set value true

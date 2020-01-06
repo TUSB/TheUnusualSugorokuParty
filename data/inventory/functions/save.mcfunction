@@ -11,3 +11,6 @@ execute store result entity 0-0-4-0-4 Pos[1] double 1 run scoreboard players get
 execute at 0-0-4-0-4 unless block ~ ~ ~ minecraft:jukebox run setblock ~ ~ ~ minecraft:jukebox replace
 execute at 0-0-4-0-4 run data modify block ~ ~ ~ RecordItem set value {id:"minecraft:stone",Count:1b,tag:{Class:{}}}
 execute at 0-0-4-0-4 run data modify block ~ ~ ~ RecordItem.tag.Class set from storage inventory:data Class
+
+# 生存フラグを付ける
+execute at 0-0-4-0-4 run data modify block ~ ~ ~ RecordItem.tag.Alive set value true

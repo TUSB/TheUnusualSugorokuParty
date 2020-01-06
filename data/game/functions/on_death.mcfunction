@@ -8,12 +8,10 @@ execute unless entity @a[team=Active,scores={Leader=1..}] run title @a subtitle 
 execute if entity @a[team=Active,scores={Leader=1..}] run title @a subtitle ["次の",{"selector":"@a[team=Active,scores={Leader=0},limit=1]"},"たちはきっとうまくやってくれるでしょう"]
 title @a title {"text":"全滅","color":"red","bold":true}
 
-# アイテムリセットを確実にする
-scoreboard players add * Death 1
-scoreboard players reset @a[team=!Active] Death
+# 現在のチームの全員から生存フラグを消す
+function inventory:remove_alive
 
 team empty Active
-
 execute as @e[tag=Island,tag=Central,limit=1] run function island:set_start
 execute as @e[tag=Piece,tag=Active,limit=1] run function piece:set_location
 execute as @e[tag=PieceFlag,tag=Active,limit=1] run function piece:set_location

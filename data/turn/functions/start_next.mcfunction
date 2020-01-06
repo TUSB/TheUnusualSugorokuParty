@@ -16,8 +16,6 @@ execute as @e[tag=PieceFlag] run function piece:apply_offset
 scoreboard players operation @a[tag=Debugger] Turn = $Piece Turn
 
 # リセット
-execute as @a[scores={Death=1..}] run function inventory:load
-scoreboard players reset @a Death
 team empty Active
 tag @e[tag=Active] remove Active
 effect clear @a
@@ -27,6 +25,9 @@ effect give @a minecraft:saturation 1 20
 execute as @a if score @s Turn = $Piece Turn run team join Active @s
 execute as @e[tag=Piece] if score @s Turn = $Piece Turn run tag @s add Active
 execute as @e[tag=PieceFlag] if score @s Turn = $Piece Turn run tag @s add Active
+
+# アイテムをチェックして必要なら巻き戻す
+execute as @a[team=Active] run function inventory:check_rollback
 
 # リーダー設定
 scoreboard players set _ Leader 2147483647
