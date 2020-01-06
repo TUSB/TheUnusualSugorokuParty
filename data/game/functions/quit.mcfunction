@@ -17,9 +17,6 @@ function event:cancel
 # タイトルを消す
 title @a times 0 0 0
 
-# タイマーを消す
-function event:timer/finish
-
 # エフェクト消す
 effect clear @a
 
