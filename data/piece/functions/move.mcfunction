@@ -1,5 +1,8 @@
 ### 駒を進める
 
+# 死亡監視停止
+schedule clear game:observe_death
+
 gamemode spectator @a
 execute as @a at @s run function sounds:piece_move
 function dice:reduce_one

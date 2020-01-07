@@ -45,8 +45,5 @@ execute as @e[tag=PieceFlag] run function piece:set_location
 execute as @e[tag=Piece,scores={Turn=0},limit=1] at @s positioned ^-1 ^ ^-3 run tp @a[team=!] ~ ~ ~
 execute as @a[team=!] at @s run spawnpoint @s ~ ~ ~
 
-# 死亡処理監視
-schedule function game:observe_death 2t replace
-
 scoreboard players set $Current Turn -1
 function turn:start_next
