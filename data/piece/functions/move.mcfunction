@@ -11,7 +11,6 @@ function dice:subtitle
 execute as @e[tag=Piece,tag=Active,limit=1] run function piece:set_pointer
 function piece:move_pointer
 execute as @e[tag=Piece,tag=Active,limit=1] run function piece:set_location
-execute as @e[tag=PieceFlag,tag=Active,limit=1] run function piece:set_location
 
 execute if score $Sum Dice matches 1.. run schedule function piece:move 10t replace
 execute unless score $Sum Dice matches 1.. run schedule function event:handle 15t replace

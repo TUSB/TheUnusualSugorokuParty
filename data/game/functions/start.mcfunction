@@ -38,8 +38,7 @@ scoreboard players operation @e[tag=PieceFlag,tag=Yellow,limit=1] Turn = @e[tag=
 function team:initialize
 
 execute as @e[tag=Island,tag=Central,limit=1] run function island:set_start
-execute as @e[tag=Piece] run function piece:set_location
-execute as @e[tag=PieceFlag] run function piece:set_location
+execute as @e[tag=PiecePart] run function piece:set_location
 
 # リスポーン地点設定
 execute as @e[tag=Piece,scores={Turn=0},limit=1] at @s positioned ^-1 ^ ^-3 run tp @a[team=!] ~ ~ ~

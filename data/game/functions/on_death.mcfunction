@@ -14,6 +14,5 @@ function inventory:remove_alive
 team empty Active
 execute as @e[tag=Island,tag=Central,limit=1] run function island:set_start
 execute as @e[tag=Piece,tag=Active,limit=1] run function piece:set_location
-execute as @e[tag=PieceFlag,tag=Active,limit=1] run function piece:set_location
 
 schedule function turn:start_next 2s replace
