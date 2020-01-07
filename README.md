@@ -5,6 +5,6 @@
 
 # TheUnusualSugorokuParty
 
-Ver 1.15
+Ver 1.15.x
 
 ![untitled2](https://user-images.githubusercontent.com/12383342/71418205-aacccb80-26ac-11ea-9a16-0486c394358a.png)
