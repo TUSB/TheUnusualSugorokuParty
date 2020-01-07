@@ -10,3 +10,5 @@ schedule clear event:end_battle/before_encount
 schedule clear event:end_battle/check_battle_state
 
 function event:timer/finish
+function event:clear_slimy
+function event:clear_item

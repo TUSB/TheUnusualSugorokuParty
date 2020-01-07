@@ -1,8 +1,7 @@
 ### 戦闘の状況を確認する
 
-# スライム系残ったの消す
-execute as @e[type=minecraft:slime,tag=!Enemy] at @s run tp @s ~ -100 ~
-execute as @e[type=minecraft:magma_cube,tag=!Enemy] at @s run tp @s ~ -100 ~
+function event:clear_slimy
+
 # 奈落に行った敵倒す
 execute as @a[team=Active] at @s positioned ~ -15 ~ if entity @s[distance=..15] run kill @s
 execute as @e[tag=Enemy] at @s positioned ~ -15 ~ if entity @s[distance=..15] run kill @s
