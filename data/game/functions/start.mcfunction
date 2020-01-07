@@ -10,9 +10,6 @@ scoreboard objectives setdisplay sidebar
 
 team empty Active
 
-scoreboard players reset * Leader
-scoreboard players reset * InventoryID
-
 scoreboard players reset * Turn
 scoreboard players set $PieceCount Turn -1
 team join Red @a[tag=Debugger]

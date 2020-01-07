@@ -1,10 +1,10 @@
 ### 敵出現タイトル表示
 
-title @a times 6 10 6
 execute as @a at @s run function sounds:battle_outbreak
-execute unless entity @a[team=Active,scores={Leader=1..}] run title @a subtitle ["",{"selector":"@a[team=Active,scores={Leader=0},limit=1]"},"は敵に見つかった！！"]
-execute if entity @a[team=Active,scores={Leader=1..}] run title @a subtitle ["",{"selector":"@a[team=Active,scores={Leader=0},limit=1]"},"たちは敵に見つかった！！"]
-title @a title {"text":"やばい！","color":"gold","bold":true}
+title @a times 6 10 6
+data modify storage team:message subtitle set value ["敵に見つかった！！"]
+data modify storage team:message title set value '{"text":"やばい！","color":"gold","bold":true}'
+function team:message
 
 scoreboard players add $Title Times 1
 execute if score $Title Times matches ..2 run schedule function event:battle/title 20t replace

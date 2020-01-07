@@ -14,6 +14,6 @@ function game:quit
 # ゴール演出
 execute as @a at @s run function sounds:goal
 title @a times 0 600 0
-execute unless entity @a[team=Active,scores={Leader=1..}] run title @a subtitle ["",{"selector":"@a[team=Active,scores={Leader=0},limit=1]"},"はゲームを攻略した！！"]
-execute if entity @a[team=Active,scores={Leader=1..}] run title @a subtitle ["",{"selector":"@a[team=Active,scores={Leader=0},limit=1]"},"たちはゲームを攻略した！！"]
-title @a title {"text":"おめでとう！","color":"green","bold":true}
+data modify storage team:message subtitle set value ["ゲームを攻略した！！"]
+data modify storage team:message title set value '{"text":"おめでとう！","color":"green","bold":true}'
+function team:message

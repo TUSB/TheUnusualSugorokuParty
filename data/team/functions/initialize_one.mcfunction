@@ -18,4 +18,5 @@ execute as @a[tag=ThisTeam] run function inventory:give_starter
 # インベントリ保存/生存フラグ設定
 execute as @a[tag=ThisTeam] run function inventory:save
 
+execute as @e[tag=Piece] if score @s Turn = _ Turn run scoreboard players operation @s Leader = _ Leader
 tag @a[tag=ThisTeam] remove ThisTeam

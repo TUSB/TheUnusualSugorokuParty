@@ -15,8 +15,8 @@ execute if data storage lottery:pool Item.tag.display.Name as @e[tag=Treasure] r
 
 execute as @a at @s run function sounds:treasure_found
 title @a times 0 100 0
-execute unless entity @a[team=Active,scores={Leader=1..}] run title @a subtitle ["",{"selector":"@a[team=Active,scores={Leader=0},limit=1]"},"は宝箱を発見した！！"]
-execute if entity @a[team=Active,scores={Leader=1..}] run title @a subtitle ["",{"selector":"@a[team=Active,scores={Leader=0},limit=1]"},"たちは宝箱を発見した！！"]
-title @a title [{"selector":"@e[tag=Treasure]"}]
+data modify storage team:message subtitle set value ["宝箱を発見した！！"]
+data modify storage team:message title set value '{"selector":"@e[tag=Treasure]"}'
+function team:message
 
 schedule function event:treasure/await_pickup 2t replace

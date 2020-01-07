@@ -4,9 +4,10 @@ schedule clear dice:cast
 function event:cancel
 execute as @a at @s run function sounds:eliminated
 title @a times 0 100 0
-execute unless entity @a[team=Active,scores={Leader=1..}] run title @a subtitle ["次の",{"selector":"@a[team=Active,scores={Leader=0},limit=1]"},"はきっとうまくやってくれるでしょう"]
-execute if entity @a[team=Active,scores={Leader=1..}] run title @a subtitle ["次の",{"selector":"@a[team=Active,scores={Leader=0},limit=1]"},"たちはきっとうまくやってくれるでしょう"]
-title @a title {"text":"全滅","color":"red","bold":true}
+data modify storage team:message prefix set value ["次の"]
+data modify storage team:message subtitle set value ["きっとうまくやってくれるでしょう"]
+data modify storage team:message title set value '{"text":"全滅","color":"red","bold":true}'
+function team:message
 
 # 現在のチームの全員から生存フラグを消す
 function inventory:remove_alive

@@ -15,11 +15,10 @@ data modify storage shop:stock Staff set value {id:"minecraft:wandering_trader",
 data modify storage shop:stock Staff.Offers.Recipes set from storage shop:stock Recipes
 data modify entity 0-0-3-0-3 SpawnData set from storage shop:stock Staff
 
-# ここから未修正
 execute as @a at @s run function sounds:shop_found
 title @a times 0 100 0
-execute unless entity @a[team=Active,scores={Leader=1..}] run title @a subtitle ["",{"selector":"@a[team=Active,scores={Leader=0},limit=1]"},"は商人に出会った！！"]
-execute if entity @a[team=Active,scores={Leader=1..}] run title @a subtitle ["",{"selector":"@a[team=Active,scores={Leader=0},limit=1]"},"たちは商人に出会った！！"]
-title @a title {"text":"はぁん","bold":true,"color":"green"}
+data modify storage team:message subtitle set value ["商人に出会った！！"]
+data modify storage team:message title set value '{"text":"はぁん","bold":true,"color":"green"}'
+function team:message
 
 schedule function event:shop/enter 2s replace

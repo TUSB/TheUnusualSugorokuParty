@@ -1,5 +1,8 @@
 ### チームの情報を初期化する
 
+scoreboard players reset * Leader
+scoreboard players reset * InventoryID
+
 # ポインタを軸に合わせる
 tp 0-0-4-0-4 0 0 3
 

@@ -29,18 +29,8 @@ execute as @a[team=Active] run function inventory:check_rollback
 # リーダー設定
 scoreboard players set _ Leader 2147483647
 scoreboard players operation _ Leader < @a[team=Active] Leader
-execute as @a[team=Active] if score @s Leader = _ Leader run scoreboard players operation @s Leader = _ InventoryID
-scoreboard players set _ Turn 2147483647
-scoreboard players operation _ Turn < @a[team=Active] Leader
-scoreboard players operation * Leader -= _ Turn
-tag @a[team=Active,scores={Leader=0},limit=1] add Leader
-scoreboard players add @a[team=Active,tag=!Leader] Leader 1
-tag @a[tag=Leader] remove Leader
-effect give @a[team=Active,scores={Leader=0}] minecraft:glowing 300 0 true
-
-# 駒光らせる
-execute as @e[tag=Piece] run data merge entity @s {Glowing:false}
-execute as @e[tag=Piece,tag=Active] run data merge entity @s {Glowing:true}
+execute as @a[team=Active] if score @s Leader = _ Leader store result score @s Leader run scoreboard players add @e[tag=Piece,tag=Active,limit=1] Leader 1
+function piece:assign_leader
 
 # 行動プレイヤーの設定
 gamemode spectator @a
