@@ -15,6 +15,10 @@ summon minecraft:spawner_minecart 0 0 0 {Tags:[CommonSpawner],MaxNearbyEntities:
 summon minecraft:area_effect_cloud 2 0 2 {Tags:[InventoryCursor],Radius:0f,UUIDMost:4L,UUIDLeast:4L,CustomName:"\"カーソル\"",CustomNameVisible:true}
 data modify entity 0-0-4-0-4 {} merge from storage template:area_effect_cloud Base
 
+summon minecraft:item 0 0 0 {Item:{id:"minecraft:iron_sword",Count:1b,tag:{}},Tags:[Ring],CustomName:"{\"text\":\"Ring\"}"}
+summon minecraft:item 0 0 0 {Item:{id:"minecraft:iron_sword",Count:1b,tag:{}},Tags:[Ring],CustomName:"{\"text\":\"Ring\"}"}
+data modify entity @e[tag=Ring] {} merge from storage template:item Base
+
 function dice:init
 function event:init
 function island:init

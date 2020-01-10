@@ -11,5 +11,6 @@ kill @e[tag=Island]
 kill @e[tag=EventEntity]
 kill @e[tag=Treasure]
 kill @e[tag=Enemy]
+kill @e[tag=Ring]
 
 schedule function main:init 2t replace
