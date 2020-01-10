@@ -7,11 +7,11 @@ function event:cancel
 function team:join_midway
 
 # ターンを進める
-execute as @e[tag=PiecePart] run function piece:ignore_offset
+execute as @e[tag=PiecePart,tag=!Unused] run function piece:ignore_offset
 execute store result score $Piece Turn run scoreboard players add $Current Turn 1
 scoreboard players operation $Piece Turn %= $PieceCount Turn
 execute if score $Piece Turn matches 0 run time add 4000
-execute as @e[tag=PiecePart] run function piece:apply_offset
+execute as @e[tag=PiecePart,tag=!Unused] run function piece:apply_offset
 
 # デバッグ用
 scoreboard players operation @a[tag=Debugger] Turn = $Piece Turn
