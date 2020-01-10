@@ -13,7 +13,7 @@ team modify Green collisionRule never
 team modify Blue collisionRule never
 team modify Yellow collisionRule never
 team add Active
-team modify Active color white
+team modify Active color gray
 team modify Active collisionRule never
 team modify Active friendlyFire false
 
