@@ -17,6 +17,6 @@ execute as @a[tag=ThisTeam] run function inventory:give_starter
 execute as @a[tag=ThisTeam] run function inventory:save
 
 execute as @e[tag=Piece] if score @s Turn = _ Turn run scoreboard players operation @s Leader = _ Leader
-execute store result score _ TeamCount if entity @a[tag=ThisTeam]
-execute as @e[tag=Piece] if score @s Turn = _ Turn run scoreboard players operation @s TeamCount = _ TeamCount
+execute store result score #_ TeamCount if entity @a[tag=ThisTeam]
+execute as @e[tag=Piece] if score @s Turn = _ Turn run scoreboard players operation @s TeamCount = #_ TeamCount
 tag @a[tag=ThisTeam] remove ThisTeam
