@@ -20,4 +20,4 @@ tp @e[tag=PieceFlag,tag=Yellow,limit=1] @e[tag=Piece,tag=Yellow,limit=1]
 
 # 旗の向きを変える
 execute as @e[tag=PieceFlag] at @s run tp @s ~ ~ ~ ~180 ~
-execute as @e[tag=PieceFlag] run data modify entity @s Pose {Head:[-10f,180f,0f]}
+execute as @e[tag=PieceFlag] run data modify entity @s Pose set value {Head:[-10f,180f,0f]}
