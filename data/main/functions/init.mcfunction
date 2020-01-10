@@ -17,7 +17,8 @@ data modify entity 0-0-4-0-4 {} merge from storage template:area_effect_cloud Ba
 
 summon minecraft:item 0 0 0 {Item:{id:"minecraft:iron_sword",Count:1b,tag:{}},Tags:[Ring],CustomName:"{\"text\":\"Ring\"}"}
 summon minecraft:item 0 0 0 {Item:{id:"minecraft:iron_sword",Count:1b,tag:{}},Tags:[Ring],CustomName:"{\"text\":\"Ring\"}"}
-data modify entity @e[tag=Ring] {} merge from storage template:item Base
+execute as @e[tag=Ring] run data modify entity @s {} merge from storage template:item Base
+execute as @e[tag=Ring,limit=1] at @s run tp @s ~ ~ ~ ~180 ~
 
 function dice:init
 function event:init
