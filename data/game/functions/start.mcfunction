@@ -22,6 +22,8 @@ team join Yellow @a[tag=Debugger]
 execute if entity @a[team=Yellow] store result score @e[tag=Yellow,tag=Piece,limit=1] Turn run scoreboard players add $PieceCount Turn 1
 scoreboard players add $PieceCount Turn 1
 
+execute as @e[tag=Piece] if score @s Turn = @s Turn run tag @s remove Unused
+
 scoreboard players operation @a[team=Red] Turn = @e[tag=Piece,tag=Red,limit=1] Turn
 scoreboard players operation @a[team=Green] Turn = @e[tag=Piece,tag=Green,limit=1] Turn
 scoreboard players operation @a[team=Blue] Turn = @e[tag=Piece,tag=Blue,limit=1] Turn

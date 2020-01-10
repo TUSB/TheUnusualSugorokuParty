@@ -1,6 +1,10 @@
 ### 途中参加処理
 
 team leave @a[team=!Active,team=!,scores={Turn=0..}]
+execute if entity @e[tag=Piece,tag=Red,tag=Unused] run team leave @a[team=Red]
+execute if entity @e[tag=Piece,tag=Green,tag=Unused] run team leave @a[team=Green]
+execute if entity @e[tag=Piece,tag=Blue,tag=Unused] run team leave @a[team=Blue]
+execute if entity @e[tag=Piece,tag=Yellow,tag=Unused] run team leave @a[team=Yellow]
 
 # 赤
 execute as @a[team=Red] run scoreboard players operation @s Turn = @e[tag=Piece,tag=Red,limit=1] Turn
