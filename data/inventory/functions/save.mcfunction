@@ -5,6 +5,8 @@ data modify storage inventory:data Class set value {Head:{},Chest:{},Legs:{},Fee
 function inventory:classify
 
 # カーソル移動
+tp 0-0-4-0-4 0 0 3
+execute store result entity 0-0-4-0-4 Pos[0] double 1 run scoreboard players get @s Turn
 execute store result entity 0-0-4-0-4 Pos[1] double 1 run scoreboard players get @s InventoryID
 
 # セーブ

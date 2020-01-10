@@ -6,8 +6,6 @@ execute as @a if score @s Turn = _ Turn run tag @s add ThisTeam
 # 初期化
 execute at 0-0-4-0-4 unless block ~ ~ ~ minecraft:jukebox run setblock ~ ~ ~ minecraft:jukebox replace
 execute at 0-0-4-0-4 run data modify block ~ ~ ~ RecordItem set value {id:"minecraft:stone",Count:1b,tag:{TeamData:{}}}
-# 人数を記録しておく
-execute at 0-0-4-0-4 store result block ~ ~ ~ RecordItem.tag.TeamData.MemberCount int 1 if entity @a[tag=ThisTeam]
 # リーダー順決定
 scoreboard players set _ Leader 0
 execute as @a[tag=ThisTeam] store result score @s Leader run scoreboard players add _ Leader 1
@@ -19,4 +17,6 @@ execute as @a[tag=ThisTeam] run function inventory:give_starter
 execute as @a[tag=ThisTeam] run function inventory:save
 
 execute as @e[tag=Piece] if score @s Turn = _ Turn run scoreboard players operation @s Leader = _ Leader
+execute store result score _ TeamCount if entity @a[tag=ThisTeam]
+execute as @e[tag=Piece] if score @s Turn = _ Turn run scoreboard players operation @s TeamCount = _ TeamCount
 tag @a[tag=ThisTeam] remove ThisTeam

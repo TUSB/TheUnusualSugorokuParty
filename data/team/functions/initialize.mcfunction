@@ -1,5 +1,10 @@
 ### チームの情報を初期化する
 
+team empty Red
+team empty Green
+team empty Blue
+team empty Yellow
+
 scoreboard players reset * Leader
 scoreboard players reset * InventoryID
 

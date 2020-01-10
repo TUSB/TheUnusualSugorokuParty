@@ -10,6 +10,7 @@ scoreboard players set @e[tag=Green,tag=Piece] Turn 1
 scoreboard players set @e[tag=Blue,tag=Piece] Turn 2
 scoreboard players set @e[tag=Yellow,tag=Piece] Turn 3
 execute as @e[tag=Piece] run function piece:set_location
+scoreboard players reset * Turn
 execute as @e[tag=Piece] at @s run tp @s ~2 ~ ~2 ~ ~
 execute as @e[tag=Piece] at @s facing entity @e[tag=Piece,sort=furthest,limit=1] feet run tp @s ^ ^ ^-4 ~ ~
 tp @e[tag=PieceFlag,tag=Red,limit=1] @e[tag=Piece,tag=Red,limit=1]
