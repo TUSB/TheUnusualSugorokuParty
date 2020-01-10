@@ -23,7 +23,7 @@ title @a times 0 0 0
 effect clear @a
 
 # 駒を未使用にする
-tag @e[tag=Piece] add Unused
+tag @e[tag=PiecePart] add Unused
 
 # デバッグ用
 gamemode creative @a[tag=Debugger]

@@ -21,7 +21,7 @@ effect give @a minecraft:saturation 1 20
 
 # 行動タグ付け
 execute as @a if score @s Turn = $Piece Turn run team join Active @s
-execute as @e[tag=PiecePart] if score @s Turn = $Piece Turn run tag @s add Active
+execute as @e[tag=PiecePart,tag=!Unused] if score @s Turn = $Piece Turn run tag @s add Active
 
 # アイテムをチェックして必要なら巻き戻す
 execute as @a[team=Active] run function inventory:check_rollback
