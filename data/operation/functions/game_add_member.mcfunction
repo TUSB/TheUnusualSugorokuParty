@@ -1,6 +1,6 @@
 ### 誰かを途中参加させる
 
-tellraw @s {"text":"[未参加のプレイヤーを参加者に追加]\n※参加させる色を[Shift+左クリック]後、参加させる人を[Shift+左クリック]します。"}
+tellraw @s {"text":"[未参加のプレイヤーを参加者に追加]\n※参加させる色を[左クリック]後、参加させる人を[Shift+左クリック]します。"}
 
 execute unless entity @e[tag=Piece,tag=Red,tag=Unused] run tellraw @s ["",{"text":"赤チーム","color":"red","clickEvent":{"action":"suggest_command","value":"/team join Red "}}]
 execute unless entity @e[tag=Piece,tag=Green,tag=Unused] run tellraw @s ["",{"text":"緑チーム","color":"green","clickEvent":{"action":"suggest_command","value":"/team join Green "}}]
