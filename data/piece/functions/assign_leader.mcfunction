@@ -5,7 +5,7 @@ scoreboard players operation $Current Leader > @a[team=Active] Leader
 
 # 光らせる
 effect clear @a minecraft:glowing
-execute as @a[team=Active] if score @s Leader = $Current Leader run effect give @s minecraft:glowing 300 100 true
+execute as @a[team=Active] if score @s Leader = $Current Leader run effect give @s minecraft:glowing 10 100 true
 
 # 知らせる
 execute as @a[team=Active] if score @s Leader = $Current Leader run title @a[team=Active] actionbar [{"text":"","color":"blue","bold":true},{"selector":"@s"},"がリーダーです。"]
