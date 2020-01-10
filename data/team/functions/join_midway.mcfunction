@@ -34,6 +34,6 @@ execute as @a[team=Yellow] store result score @s InventoryID run scoreboard play
 execute as @a[team=Yellow] run function inventory:give_starter
 execute as @a[team=Yellow] run function inventory:save
 
-tellraw @a ["参加者が追加されました: ",{"selector":"@a[team=!Active,team=!]"}]
+execute if entity @a[team=!Active,team=!] run tellraw @a ["参加者が追加されました: ",{"selector":"@a[team=!Active,team=!]"}]
 
 team leave @a[team=!Active,team=!]
