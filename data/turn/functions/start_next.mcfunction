@@ -3,6 +3,9 @@
 # イベント処理残ってたら消す
 function event:cancel
 
+# 途中参加者を確認
+function team:join_midway
+
 # ターンを進める
 execute as @e[tag=PiecePart] run function piece:ignore_offset
 execute store result score $Piece Turn run scoreboard players add $Current Turn 1

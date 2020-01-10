@@ -24,14 +24,17 @@ scoreboard players add $PieceCount Turn 1
 
 execute as @e[tag=Piece] if score @s Turn = @s Turn run tag @s remove Unused
 
-scoreboard players operation @a[team=Red] Turn = @e[tag=Piece,tag=Red,limit=1] Turn
-scoreboard players operation @a[team=Green] Turn = @e[tag=Piece,tag=Green,limit=1] Turn
-scoreboard players operation @a[team=Blue] Turn = @e[tag=Piece,tag=Blue,limit=1] Turn
-scoreboard players operation @a[team=Yellow] Turn = @e[tag=Piece,tag=Yellow,limit=1] Turn
-scoreboard players operation @e[tag=PieceFlag,tag=Red,limit=1] Turn = @e[tag=Piece,tag=Red,limit=1] Turn
-scoreboard players operation @e[tag=PieceFlag,tag=Green,limit=1] Turn = @e[tag=Piece,tag=Green,limit=1] Turn
-scoreboard players operation @e[tag=PieceFlag,tag=Blue,limit=1] Turn = @e[tag=Piece,tag=Blue,limit=1] Turn
-scoreboard players operation @e[tag=PieceFlag,tag=Yellow,limit=1] Turn = @e[tag=Piece,tag=Yellow,limit=1] Turn
+execute as @e[tag=Piece,tag=Red,tag=!Unused,limit=1] run scoreboard players operation @a[team=Red] Turn = @s Turn
+execute as @e[tag=Piece,tag=Green,tag=!Unused,limit=1] run scoreboard players operation @a[team=Green] Turn = @s Turn
+execute as @e[tag=Piece,tag=Blue,tag=!Unused,limit=1] run scoreboard players operation @a[team=Blue] Turn = @s Turn
+execute as @e[tag=Piece,tag=Yellow,tag=!Unused,limit=1] run scoreboard players operation @a[team=Yellow] Turn = @s Turn
+
+execute as @e[tag=Piece,tag=Red,tag=!Unused,limit=1] run scoreboard players operation @e[tag=PieceFlag,tag=Red] Turn = @s Turn
+execute as @e[tag=Piece,tag=Green,tag=!Unused,limit=1] run scoreboard players operation @e[tag=PieceFlag,tag=Green] Turn = @s Turn
+execute as @e[tag=Piece,tag=Blue,tag=!Unused,limit=1] run scoreboard players operation @e[tag=PieceFlag,tag=Blue] Turn = @s Turn
+execute as @e[tag=Piece,tag=Yellow,tag=!Unused,limit=1] run scoreboard players operation @e[tag=PieceFlag,tag=Yellow] Turn = @s Turn
+
+execute as @e[tag=PieceFlag] if score @s Turn = @s Turn run tag @s remove Unused
 
 # チーム情報を初期化する
 function team:initialize
