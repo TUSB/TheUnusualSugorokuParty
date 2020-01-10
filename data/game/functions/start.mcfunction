@@ -1,8 +1,5 @@
 ### 新しいゲームを開始する
 
-# 旗の向きを戻す
-execute as @e[tag=PieceFlag] run data modify entity @s Pose {Head:[-10f,0f,0f]}
-
 # HP表示正常化
 effect give @a minecraft:absorption 1 0 true
 effect give @a minecraft:instant_health 1 10 true
