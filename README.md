@@ -19,3 +19,7 @@ TheUnusualSkyBlock v9 と Minecraft Ver 1.15(1.15.2) のアイテムを利用し
 アドベンチャー型のメガゲームマップです。  
 複数人と一緒にプレイができ、わかりやすいルールで  
 端的に進めていける配布マップとなっています。  
+
+変更履歴： https://github.com/TUSB/TheUnusualSugorokuParty/blob/master/CHANGELOG.md
+
+(c) TUSB 2020 
